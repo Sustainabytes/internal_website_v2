@@ -6,11 +6,16 @@ function HeroCarousel() {
             <h1 className="ourTeams font-sans">Our <span className="teams">Teams</span></h1>
             <div className="heroMainBlock">
                 <div className="heroLeftside">
-                    <div className="flashcards"></div>
+                    <div className="flashcards">
+                        <div className="flashcard"></div>
+                    </div>
                 </div>
                 <div className="heroRightside">
-                    <h2>Operations</h2>
-                    <h4>Description goes here faaaaaaa aaaafdsafdsaf aaaaaaaasweffff fffff ffffffffffffff</h4>
+                    <div className="heroText">
+                        <h2 className="font-sans">Operations</h2>
+                        <h4>Description goes here</h4>
+                    </div>
+                    
                     <button className="learnMoreBtn">Learn More</button>
                 </div>
             </div>

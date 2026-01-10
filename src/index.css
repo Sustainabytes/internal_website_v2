@@ -17,6 +17,10 @@ body {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
 }
 
+.font-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .centerFlex {
   display: flex;
   justify-content: center;

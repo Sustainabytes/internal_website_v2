@@ -6,20 +6,49 @@
 }
 
 .ourTeams {
+    padding-top: 5%;
     align-self: flex-start;
     padding-left: 10%;
+    color: var(--clr-secondary-400);
+    font-weight: 500;
+    font-style: italic;
+    font-size: 60px;
+}
+
+.teams {
+    color: var(--clr-primary-500);
 }
 
 .heroMainBlock {
-    background-color: #F4F7EC;
+    background-color: var(--clr-primary-300);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5%;
+    padding: 6%;
 }
 
 .heroLeftside {
-    background-color: rgb(170, 170, 170);
-    height: 100px;
-    width: 45%;
+    background-color: rgb(85, 85, 85);
+    width: 50%;
+    aspect-ratio: 16 / 9;
+}
+
+.heroRightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:auto;
+    width: 40%;
+    background-color: aqua;
+}
+
+.heroRightside h4 {
+    color: #568366;
+    min-height: 100px;
+}
+
+.learnMoreBtn {
+    align-self: flex-end;
 }

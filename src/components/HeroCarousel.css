@@ -1,0 +1,25 @@
+.heroCarousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourTeams {
+    align-self: flex-start;
+    padding-left: 10%;
+}
+
+.heroMainBlock {
+    background-color: #F4F7EC;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroLeftside {
+    background-color: rgb(170, 170, 170);
+    height: 100px;
+    width: 45%;
+}

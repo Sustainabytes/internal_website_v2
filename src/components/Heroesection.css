@@ -1,0 +1,48 @@
+.heroesection {
+    position: relative;
+    gap: 20px;
+    height: 800px;
+}
+
+.mascot {
+    position: absolute;
+    top: 12px;
+    right: 300px;
+
+    z-index: -1;
+}
+
+.description {
+    max-width: 480px;
+}
+
+h2 {
+    color: var(--clr-primary-400);
+    font-size: 24px;
+}
+
+h1 {
+    color: var(--clr-primary-500);
+    font-size: 60px;
+    font-weight: 500;
+
+    word-spacing: -0.1em;
+    letter-spacing: -0.02em;
+}
+
+h1 span {
+    font-weight: 600;
+    color: var(--clr-secondary-400);
+}
+
+.description p {
+    color: var(--clr-primary-600);
+    font-size: 20px;
+    font-weight: 600;
+
+    max-width: 465px;
+}
+
+.description p span {
+    color: var(--clr-primary-400);
+}

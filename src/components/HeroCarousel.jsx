@@ -2,6 +2,7 @@ import "./Herocarousel.css";
 import Clara from "../assets/ClaraGomes.svg";
 import ClaraVector from "../assets/ClaraVector.svg";
 import Frame from "../assets/MemberFrame.svg"
+import Mail from "../assets/Mail.svg"
 
 function TeamsSection({ backColor, textColor, text, arr }) {
     return (
@@ -28,11 +29,18 @@ function TeamsSection({ backColor, textColor, text, arr }) {
 function MemberPhoto({ name, role, email, color }) {
     return (
         <div className="memPhoto">
-            <h3 style={{ color }}>{role}</h3>
-            <h4 style={{ color }}>{name}</h4>
-            <h5 style={{ color }}>{email}</h5>
-            <img src={Frame} alt="Member frame" />
+            <div className="aboveFrame">
+                <h3 style={{ color }}>{role}</h3>
+                <h4 style={{ color }}>{name}</h4>
+                <h5 style={{ color }}>{email}</h5>
+                <img src={Mail} alt="Mail" />
+            </div>
+            
+
+            <img src={Frame} alt="Member frame" className="frame"/>
+            
         </div>
+
     )
 }
 
@@ -57,6 +65,8 @@ function HeroCarousel() {
                 </div>
             </div>
 
+
+
             <div className="claraSection">
                 <div className="claraLeftside">
                     <img src={Clara} alt="Clara Gomes" className="claraPic"/>
@@ -69,6 +79,8 @@ function HeroCarousel() {
                 </div>
             </div>
 
+
+
             <div className="theTeams">
                 <TeamsSection
                     backColor="linear-gradient(90deg, #AD99FF, #F5FAF7)"
@@ -79,7 +91,6 @@ function HeroCarousel() {
                         { name: "Mikael M-R.", role: "Secretary", email: "email@email.com" }
                     ]}  
                 />
-
                 <TeamsSection
                     backColor="linear-gradient(90deg, #F3E880, #F5FAF7)"
                     textColor="#C9AB27"
@@ -90,8 +101,7 @@ function HeroCarousel() {
                         { name: "Aish M.", role: "External Affairs", email: "email2@email.com" }, 
                     ]}
                 />
-
-                    <TeamsSection
+                <TeamsSection
                     backColor="linear-gradient(90deg, #93C4A6, #F5FAF7)"
                     textColor="#51B976"
                     text="Data Analytics"
@@ -101,8 +111,7 @@ function HeroCarousel() {
                         { name: "Minh T.", role: "Member", email: "email2@email.com" }, 
                     ]}
                 />
-
-                    <TeamsSection
+                <TeamsSection
                     backColor="linear-gradient(90deg, #FBBEF6, #FAF5F9)"
                     textColor="#EF71E5"
                     text="Engagement and Education"
@@ -110,8 +119,7 @@ function HeroCarousel() {
                         { name: "Jimmy Z.", role: "Member", email: "email2@email.com" }
                     ]}
                 />
-
-                    <TeamsSection
+                <TeamsSection
                     backColor="linear-gradient(90deg, #BED8FB, #F5F8FA)"
                     textColor="#7EB3F8"
                     text="Web Development"

@@ -131,17 +131,36 @@
     color: var(--clr-secondary-400);
 }
 
+.theTeams {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--clr-primary-600);
+    gap: 50px;
+}
+
 .teamSection {
     display: flex;
+    flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
 
+
 .teamTitle {
     width: 90%;
-    height: 50px;
+    height: 892x;
     display: flex;
     align-items: center;
     padding-left: 30px;
+    font-size: 60px;
+    font-weight: 600;
 }
+
+.teamMembers {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+

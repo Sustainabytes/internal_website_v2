@@ -1,28 +1,41 @@
 import "./Herocarousel.css";
 import Clara from "../assets/ClaraGomes.svg";
 import ClaraVector from "../assets/ClaraVector.svg";
+import Frame from "../assets/MemberFrame.svg"
 
-function TeamsSection(backColor, textColor, text) {
+function TeamsSection({ backColor, textColor, text, arr }) {
     return (
     <div className="teamSection">
-        <div className="teamTitle" style={{backgroundColor: backColor}}> 
+        <div className="teamTitle font-sans" style={{background: backColor}}> 
             {text}
         </div>
         
-        <div className="teamMembers">
-
-        </div>
+            <div className="teamMembers">
+                {arr.map((member, index) => (
+                    <MemberPhoto
+                        key={index}
+                        name={member.name}
+                        role={member.role}
+                        email={member.email}
+                        color={textColor}
+                        />
+                ))}
+            </div>
     </div>
     )
 }
 
-// function MemberPhoto(name, role, email) {
-//     return (
-//         <div>
+function MemberPhoto({ name, role, email, color }) {
+    return (
+        <div className="memPhoto">
+            <h3 style={{ color }}>{role}</h3>
+            <h3 style={{ color }}>{name}</h3>
+            <h5 style={{ color }}>{email}</h5>
+            <img src={Frame} alt="Member frame" />
+        </div>
+    )
+}
 
-//         </div>
-//     )
-// }
 
 function HeroCarousel() {
     return (
@@ -56,7 +69,45 @@ function HeroCarousel() {
                 </div>
             </div>
 
-            {TeamsSection("aqua", "white", "wow")}
+            <div className="theTeams">
+                <TeamsSection
+                    backColor="linear-gradient(90deg, #AD99FF, #F5FAF7)"
+                    textColor="blue"
+                    text="E-Board"
+                    arr={[{ name: "name", role: "role", email: "email@email.com" },{ name: "h", role: "p", email: "d@email.com" }]}
+                    
+                />
+
+                <TeamsSection
+                    backColor="linear-gradient(90deg, #F3E880, #F5FAF7)"
+                    textColor="black"
+                    text="Operations"
+                    arr={[{ name: "name2", role: "role2", email: "email2@email.com" }]}
+                />
+
+                    <TeamsSection
+                    backColor="linear-gradient(90deg, #93C4A6, #F5FAF7)"
+                    textColor="yellow"
+                    text="Data Analytics"
+                    arr={[{ name: "name2", role: "role2", email: "email2@email.com" }]}
+                />
+
+                    <TeamsSection
+                    backColor="linear-gradient(90deg, #FBBEF6, #FAF5F9)"
+                    textColor="red"
+                    text="Engagement and Education"
+                    arr={[{ name: "name2", role: "role2", email: "email2@email.com" }]}
+                />
+
+                    <TeamsSection
+                    backColor="linear-gradient(90deg, #BED8FB, #F5F8FA)"
+                    textColor="maroon"
+                    text="Web Development"
+                    arr={[{ name: "name2", role: "role2", email: "email2@email.com" }]}
+                />
+            </div>
+
+
             
         </div>
     )

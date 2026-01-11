@@ -29,7 +29,7 @@ function MemberPhoto({ name, role, email, color }) {
     return (
         <div className="memPhoto">
             <h3 style={{ color }}>{role}</h3>
-            <h3 style={{ color }}>{name}</h3>
+            <h4 style={{ color }}>{name}</h4>
             <h5 style={{ color }}>{email}</h5>
             <img src={Frame} alt="Member frame" />
         </div>
@@ -72,38 +72,56 @@ function HeroCarousel() {
             <div className="theTeams">
                 <TeamsSection
                     backColor="linear-gradient(90deg, #AD99FF, #F5FAF7)"
-                    textColor="blue"
+                    textColor="#3111B2"
                     text="E-Board"
-                    arr={[{ name: "name", role: "role", email: "email@email.com" },{ name: "h", role: "p", email: "d@email.com" }]}
-                    
+                    arr={[{ name: "Tianyi C.", role: "President", email: "email@email.com" },
+                        { name: "Kyle C.", role: "VP", email: "d@email.com" }, 
+                        { name: "Mikael M-R.", role: "Secretary", email: "email@email.com" }
+                    ]}  
                 />
 
                 <TeamsSection
                     backColor="linear-gradient(90deg, #F3E880, #F5FAF7)"
-                    textColor="black"
+                    textColor="#C9AB27"
                     text="Operations"
-                    arr={[{ name: "name2", role: "role2", email: "email2@email.com" }]}
+                    arr={[{ name: "Jerry C.", role: "Social Media", email: "email2@email.com" }, 
+                        { name: "Kalia C.", role: "Treasurer", email: "email2@email.com" }, 
+                        { name: "Kaavya P.", role: "Business", email: "email2@email.com" }, 
+                        { name: "Aish M.", role: "External Affairs", email: "email2@email.com" }, 
+                    ]}
                 />
 
                     <TeamsSection
                     backColor="linear-gradient(90deg, #93C4A6, #F5FAF7)"
-                    textColor="yellow"
+                    textColor="#51B976"
                     text="Data Analytics"
-                    arr={[{ name: "name2", role: "role2", email: "email2@email.com" }]}
+                    arr={[{ name: "Seokyun H.", role: "Lead", email: "email2@email.com" }, 
+                        { name: "Abby C.", role: "Lead", email: "email2@email.com" }, 
+                        { name: "Eric Z.", role: "Member", email: "email2@email.com" }, 
+                        { name: "Minh T.", role: "Member", email: "email2@email.com" }, 
+                    ]}
                 />
 
                     <TeamsSection
                     backColor="linear-gradient(90deg, #FBBEF6, #FAF5F9)"
-                    textColor="red"
+                    textColor="#EF71E5"
                     text="Engagement and Education"
-                    arr={[{ name: "name2", role: "role2", email: "email2@email.com" }]}
+                    arr={[{ name: "Tristan A.", role: "Member", email: "email2@email.com" },
+                        { name: "Jimmy Z.", role: "Member", email: "email2@email.com" }
+                    ]}
                 />
 
                     <TeamsSection
                     backColor="linear-gradient(90deg, #BED8FB, #F5F8FA)"
-                    textColor="maroon"
+                    textColor="#7EB3F8"
                     text="Web Development"
-                    arr={[{ name: "name2", role: "role2", email: "email2@email.com" }]}
+                    arr={[{ name: "Arsh K.", role: "Lead", email: "email2@email.com" },
+                        { name: "Cinnie L.", role: "Lead", email: "email2@email.com" },
+                        { name: "Winnie C.", role: "Lead", email: "email2@email.com" },
+                        { name: "Amanda Z.", role: "Member", email: "email2@email.com" },
+                        { name: "Anusha K.", role: "Member", email: "email2@email.com" },
+                        { name: "Willow C.", role: "Member", email: "email2@email.com" }
+                    ]}
                 />
             </div>
 

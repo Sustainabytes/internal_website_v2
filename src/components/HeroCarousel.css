@@ -159,8 +159,20 @@
 }
 
 .teamMembers {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
     display: flex;
-    gap: 30px;
+    gap: 71px;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teamMembers h3 {
+    font-size: 30px;
+}
+
+.teamMembers h4 {
+    font-size: 24px;
 }
 

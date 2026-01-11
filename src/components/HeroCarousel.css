@@ -26,7 +26,7 @@
     justify-content: center;
     align-items: center;
     gap: 5%;
-    padding: 6%;
+    padding: 3%;
 }
 
 .heroLeftside {
@@ -66,7 +66,7 @@
     justify-self: flex-start;
 }
 
-.learnMoreBtn {
+.membersBtn {
     font-size: 20px;
     font-weight: 600;
     color: var(--clr-neutral-100);
@@ -76,4 +76,72 @@
     background-color: var(--clr-secondary-300);
     height: 51px;
     width: 208px;
+}
+
+
+
+.claraSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 5%;
+    padding-left: 10%;
+}
+
+.claraLeftside {
+    position: relative;
+    width: clamp(260px, 28vw, 380px);
+    aspect-ratio: 1 / 1;
+}
+
+.claraPic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.claraVec {
+    position: absolute;
+    inset: 0;
+    width: 140%;
+    height: 140%;
+    transform: translate(-19%, -13%);
+    pointer-events: none;
+}
+
+
+.claraRightside h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--clr-primary-600);
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.claraRightside h4 {
+    font-size: 24px;
+    font-weight: 200;
+    color: var(--clr-secondary-400);
+    text-align: center;
+}
+
+.advisor {
+    color: var(--clr-secondary-400);
+}
+
+.teamSection {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.teamTitle {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
 }

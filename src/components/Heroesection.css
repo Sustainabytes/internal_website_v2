@@ -1,7 +1,7 @@
 .heroesection {
     position: relative;
     gap: 20px;
-    height: 800px;
+    height: 790px;
 }
 
 .mascot {
@@ -24,10 +24,7 @@ h2 {
 h1 {
     color: var(--clr-primary-500);
     font-size: 60px;
-    font-weight: 500;
-
-    word-spacing: -0.1em;
-    letter-spacing: -0.02em;
+    font-weight: 600;
 }
 
 h1 span {

@@ -1,0 +1,23 @@
+.ourVision {
+    width: 100vw;
+    height: 380px;
+    gap: 20px;
+
+    background-color: var(--clr-primary-400);
+}
+
+.ourVision h1 {
+    color: var(--clr-neutral-100);
+    font-weight: 700;
+}
+
+.visionStatement {
+    max-width: 770px;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.visionStatement u {
+    color: var(--clr-primary-300);
+}

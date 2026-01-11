@@ -15,9 +15,10 @@
 
 body {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
+  overflow-x: hidden;
 }
 
-.font-sans {
+.font-sans, h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -25,4 +26,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.column {
+  flex-direction: column;
 }

@@ -5,12 +5,12 @@ import Frame from "../assets/MemberFrame.svg"
 import Mail from "../assets/Mail.svg"
 import Arrow from "../assets/OurTeamsArrow.svg"
 
-function TeamsSection({ backColor, textColor, text, arr }) {
+function TeamsSection({ id, backColor, textColor, text, arr }) {
     return (
-    <div className="teamSection">
-        <div className="teamTitle font-sans" style={{background: backColor}}> 
-            {text}
-        </div>
+        <div id={id} className="teamSection">
+            <div className="teamTitle font-sans" style={{ background: backColor }}>
+                {text}
+            </div>
 
             <div className="teamMembers">
                 {arr.map((member, index) => (
@@ -20,12 +20,13 @@ function TeamsSection({ backColor, textColor, text, arr }) {
                         role={member.role}
                         email={member.email}
                         color={textColor}
-                        />
+                    />
                 ))}
             </div>
-    </div>
-    )
+        </div>
+    );
 }
+
 
 function MemberPhoto({ name, role, email, color }) {
     return (
@@ -46,6 +47,36 @@ function MemberPhoto({ name, role, email, color }) {
     )
 }
 
+function TeamDescription({ imgLink, Title, Desc, Scroll }) {
+    return (
+    <div className="heroMainBlock">
+                <div className="heroLeftside">
+                    <div className="flashcards">
+                        <div className="flashcard">
+                            <img src={imgLink}/>
+                        </div>
+                    </div>
+                </div>
+                <div className="heroRightside">
+                    <div className="heroText">
+                        <h2 className="font-sans">{Title}</h2>
+                        <h4>{Desc}</h4>
+                    </div>
+                        <button
+                        className="membersBtn"
+                        onClick={() => {
+                            document
+                            .getElementById(Scroll)
+                            ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }}>
+                            Members
+                        </button>
+                </div>
+            </div>
+
+    )
+}
+
 
 function HeroCarousel() {
     return (
@@ -55,20 +86,42 @@ function HeroCarousel() {
                 <h1 className="ourTeams font-sans">Our <span className="teams">Teams</span></h1>
                 <img src={Arrow} alt="arrow" className="arrow"/>
             </div>
-            <div className="heroMainBlock">
-                <div className="heroLeftside">
-                    <div className="flashcards">
-                        <div className="flashcard"></div>
-                    </div>
-                </div>
-                <div className="heroRightside">
-                    <div className="heroText">
-                        <h2 className="font-sans">E-Board</h2>
-                        <h4>Description goes here</h4>
-                    </div>
-                    <button className="membersBtn">Members</button>
-                </div>
-            </div>
+
+            <TeamDescription
+                imgLink={Clara}
+                Title="E-Board"
+                Desc="Description here"
+                Scroll="eboard"
+            />
+
+            <TeamDescription
+                imgLink={Mail}
+                Title="Operations"
+                Desc="Description here 2"
+                Scroll="operations"
+            />
+
+            <TeamDescription
+                imgLink={ClaraVector}
+                Title="Data Analytics"
+                Desc="Description here 3"
+                Scroll="data-analytics"
+            />
+
+            <TeamDescription
+                imgLink={Frame}
+                Title="Engagement and Education"
+                Desc="Description here 4"
+                Scroll="engagement-education"
+            />
+
+            <TeamDescription
+                imgLink={Arrow}
+                Title="Web Development"
+                Desc="Description here 5"
+                Scroll="web-dev"
+            />
+
 
 
 
@@ -88,15 +141,17 @@ function HeroCarousel() {
 
             <div className="theTeams">
                 <TeamsSection
+                    id="eboard"
                     backColor="linear-gradient(90deg, #AD99FF, #F5FAF7)"
                     textColor="#3111B2"
                     text="E-Board"
                     arr={[{ name: "Tianyi C.", role: "President", email: "tc757@cornell.edu" },
-                        { name: "Kyle C.", role: "VP", email: "ksc224@cornell.edu" }, 
+                        { name: "Kyle C.", role: "Vice President", email: "ksc224@cornell.edu" }, 
                         { name: "Mikael M-R.", role: "Secretary", email: "mm3446@cornell.edu" }
                     ]}  
                 />
                 <TeamsSection
+                    id="operations"
                     backColor="linear-gradient(90deg, #F3E880, #F5FAF7)"
                     textColor="#C9AB27"
                     text="Operations"
@@ -107,6 +162,7 @@ function HeroCarousel() {
                     ]}
                 />
                 <TeamsSection
+                    id="data-analytics"
                     backColor="linear-gradient(90deg, #93C4A6, #F5FAF7)"
                     textColor="#51B976"
                     text="Data Analytics"
@@ -117,6 +173,7 @@ function HeroCarousel() {
                     ]}
                 />
                 <TeamsSection
+                    id="engagement-education"
                     backColor="linear-gradient(90deg, #FBBEF6, #FAF5F9)"
                     textColor="#EF71E5"
                     text="Engagement and Education"
@@ -125,6 +182,7 @@ function HeroCarousel() {
                     ]}
                 />
                 <TeamsSection
+                    id="web-dev"
                     backColor="linear-gradient(90deg, #BED8FB, #F5F8FA)"
                     textColor="#7EB3F8"
                     text="Web Development"

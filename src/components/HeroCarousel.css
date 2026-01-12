@@ -1,7 +1,8 @@
 html, body {
-  width: 100%;
-  overflow-x: hidden;
-  margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
 .heroCarousel {
@@ -55,6 +56,7 @@ html, body {
     background-color: rgb(255, 255, 255);
     aspect-ratio: 10 / 6;
     border-radius: 15px;
+    box-shadow: 13px 13px 7px 0px rgba(0, 0, 0, 0.25);
 }
 
 .heroRightside {
@@ -106,6 +108,8 @@ html, body {
     gap: 10%;
     padding: 5%;
     padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .claraLeftside {
@@ -193,10 +197,10 @@ html, body {
 }
 
 .frame {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .aboveFrame {

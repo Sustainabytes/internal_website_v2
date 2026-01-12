@@ -12,13 +12,25 @@ html, body {
 }
 
 .ourTeams {
-    padding-top: 5%;
-    align-self: flex-start;
-    padding-left: 10%;
     color: var(--clr-secondary-400);
     font-weight: 500;
     font-style: italic;
     font-size: 60px;
+}
+
+.ourTeamsTitle {
+    align-self: flex-start;
+    display: flex;
+    gap: 10px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+
+.arrow {
+    padding-top: 20px;;
+    height: 80px;
+    width: auto;
 }
 
 .teams {

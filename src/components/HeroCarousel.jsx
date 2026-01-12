@@ -3,6 +3,7 @@ import Clara from "../assets/ClaraGomes.svg";
 import ClaraVector from "../assets/ClaraVector.svg";
 import Frame from "../assets/MemberFrame.svg"
 import Mail from "../assets/Mail.svg"
+import Arrow from "../assets/OurTeamsArrow.svg"
 
 function TeamsSection({ backColor, textColor, text, arr }) {
     return (
@@ -37,7 +38,6 @@ function MemberPhoto({ name, role, email, color }) {
                     <div className="emailLink" style={{ color }}>{email}</div>
                 </div>
             </div>
-            
 
             <img src={Frame} alt="Member frame" className="frame"/>
             
@@ -51,7 +51,10 @@ function HeroCarousel() {
     return (
         <div className="heroCarousel">
 
-            <h1 className="ourTeams font-sans">Our <span className="teams">Teams</span></h1>
+            <div className="ourTeamsTitle">
+                <h1 className="ourTeams font-sans">Our <span className="teams">Teams</span></h1>
+                <img src={Arrow} alt="arrow" className="arrow"/>
+            </div>
             <div className="heroMainBlock">
                 <div className="heroLeftside">
                     <div className="flashcards">

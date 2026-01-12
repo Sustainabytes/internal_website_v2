@@ -1,9 +1,13 @@
 import "./Herocarousel.css";
+import { useState } from "react";
+
 import Clara from "../assets/ClaraGomes.svg";
 import ClaraVector from "../assets/ClaraVector.svg";
 import Frame from "../assets/MemberFrame.svg"
 import Mail from "../assets/Mail.svg"
 import Arrow from "../assets/OurTeamsArrow.svg"
+import NextArrow from "../assets/NextArrow.svg"
+import BackArrow from "../assets/BackArrow.svg"
 
 function TeamsSection({ id, backColor, textColor, text, arr }) {
     return (
@@ -47,38 +51,85 @@ function MemberPhoto({ name, role, email, color }) {
     )
 }
 
-function TeamDescription({ imgLink, Title, Desc, Scroll }) {
+function TeamDescription({ imgLink, Title, Desc, Scroll, onNext, onPrev}) {
     return (
-    <div className="heroMainBlock">
-                <div className="heroLeftside">
-                    <div className="flashcards">
-                        <div className="flashcard">
-                            <img src={imgLink}/>
-                        </div>
+        <div className="heroMainBlock">
+            <img
+                src={BackArrow}
+                className="backArrow"
+                onClick={onPrev}
+            />
+            <img
+                src={NextArrow}
+                className="nextArrow"
+                onClick={onNext}
+            />
+
+            <div className="heroLeftside">
+                <div className="flashcards">
+                    <div className="flashcard">
+                        <img src={imgLink}/>
                     </div>
-                </div>
-                <div className="heroRightside">
-                    <div className="heroText">
-                        <h2 className="font-sans">{Title}</h2>
-                        <h4>{Desc}</h4>
-                    </div>
-                        <button
-                        className="membersBtn"
-                        onClick={() => {
-                            document
-                            .getElementById(Scroll)
-                            ?.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }}>
-                            Members
-                        </button>
                 </div>
             </div>
-
+            
+            <div className="heroRightside">
+                <div className="heroText">
+                    <h2 className="font-sans">{Title}</h2>
+                    <h4>{Desc}</h4>
+                </div>
+                    <button
+                    className="membersBtn"
+                    onClick={() => {
+                        document
+                        .getElementById(Scroll)
+                        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }}>
+                        Members
+                    </button>
+            </div>
+        </div>
     )
 }
 
 
 function HeroCarousel() {
+
+    const slides = [
+    {
+        img: Clara,
+        title: "E-Board",
+        desc: "Description here",
+        scroll: "eboard",
+    },
+    {
+        img: Mail,
+        title: "Operations",
+        desc: "Description here 2",
+        scroll: "operations",
+    },
+    {
+        img: ClaraVector,
+        title: "Data Analytics",
+        desc: "Description here 3",
+        scroll: "data-analytics",
+    },
+    {
+        img: Frame,
+        title: "Engagement and Education",
+        desc: "Description here 4",
+        scroll: "engagement-education",
+    },
+    {
+        img: Arrow,
+        title: "Web Development",
+        desc: "Description here 5",
+        scroll: "web-dev",
+    },
+    ];
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+
     return (
         <div className="heroCarousel">
 
@@ -88,41 +139,19 @@ function HeroCarousel() {
             </div>
 
             <TeamDescription
-                imgLink={Clara}
-                Title="E-Board"
-                Desc="Description here"
-                Scroll="eboard"
+            imgLink={slides[currentSlide].img}
+            Title={slides[currentSlide].title}
+            Desc={slides[currentSlide].desc}
+            Scroll={slides[currentSlide].scroll}
+            onNext={() =>
+                setCurrentSlide((prev) => (prev + 1) % slides.length)
+            }
+            onPrev={() =>
+                setCurrentSlide((prev) =>
+                prev === 0 ? slides.length - 1 : prev - 1
+                )
+            }
             />
-
-            <TeamDescription
-                imgLink={Mail}
-                Title="Operations"
-                Desc="Description here 2"
-                Scroll="operations"
-            />
-
-            <TeamDescription
-                imgLink={ClaraVector}
-                Title="Data Analytics"
-                Desc="Description here 3"
-                Scroll="data-analytics"
-            />
-
-            <TeamDescription
-                imgLink={Frame}
-                Title="Engagement and Education"
-                Desc="Description here 4"
-                Scroll="engagement-education"
-            />
-
-            <TeamDescription
-                imgLink={Arrow}
-                Title="Web Development"
-                Desc="Description here 5"
-                Scroll="web-dev"
-            />
-
-
 
 
             <div className="claraSection">
@@ -140,6 +169,8 @@ function HeroCarousel() {
 
 
             <div className="theTeams">
+
+                
                 <TeamsSection
                     id="eboard"
                     backColor="linear-gradient(90deg, #AD99FF, #F5FAF7)"

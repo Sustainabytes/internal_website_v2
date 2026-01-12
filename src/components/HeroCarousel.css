@@ -39,6 +39,8 @@ html, body {
 }
 
 .heroMainBlock {
+    position: relative;
+
     background-color: var(--clr-primary-300);
     width: 100%;
     display: flex;
@@ -46,6 +48,19 @@ html, body {
     align-items: center;
     gap: 5%;
     padding: 3%;
+}
+
+.backArrow {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.nextArrow {
+    position: absolute;
 }
 
 .heroLeftside {

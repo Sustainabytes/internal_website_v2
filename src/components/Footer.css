@@ -1,0 +1,48 @@
+.footer {
+    height: 310px;
+    width: 100vw;
+    background-color: var(--clr-primary-300);
+
+    gap: 60px;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.footer-header h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--clr-primary-400);
+}
+
+.footer-header a {
+    color: var(--clr-secondary-400);
+}
+
+.section1 {
+    width: 100vw;
+    gap: 15px;
+}
+
+.mission {
+    max-width: 770px;
+    font-size: 18px;
+
+    text-align: center;
+}
+
+.mission u {
+    color: var(--clr-secondary-400);
+}
+
+.cornellStatement, .section2 p, .cornellStatement a, .section2  {
+    gap: 10px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    color: var(--clr-primary-600);
+}

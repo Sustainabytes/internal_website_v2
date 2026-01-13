@@ -1,5 +1,5 @@
 import Msg from "../assets/Msg.svg";
-import TeamPhoto from "../assets/TeamPhoto.svg"
+import TeamPhoto from "../assets/TeamPhoto.svg";
 import { Rocket, BookCopy } from "lucide-react";
 import "./HomeBody.css";
 
@@ -13,7 +13,7 @@ function HomeBody() {
         "Through Working Groups, we apply data analytics and software engineering to real-world sustainability and serve the local area.",
       tags: ["Data Analytics", "Web Dev", "Community Impact"],
       button: "Learn More",
-      photo: TeamPhoto
+      photo: TeamPhoto,
     },
     {
       icon: BookCopy,
@@ -23,7 +23,7 @@ function HomeBody() {
         "Participate in socials, networking events, career panels, and guest speakers. ",
       tags: ["Network", "Career Development", "Guest Speakers"],
       button: "Event Timeline",
-      photo: TeamPhoto
+      photo: TeamPhoto,
     },
   ];
 
@@ -44,25 +44,46 @@ function HomeBody() {
         </p>
       </div>
 
-      <div className="groups centerFlex column" style={{padding: "100px 0", gap: "170px"}}>
+      <div
+        className="groups centerFlex column"
+        style={{ padding: "100px 0", gap: "170px" }}
+      >
         {groups.map((group, index) => {
           const Icon = group.icon;
 
           return (
-            <div className="group-card centerFlex" style={{ flexDirection: index % 2 === 0 ? "row-reverse" : "row" }}>
+            <div
+              className="group-card centerFlex"
+              style={{ flexDirection: index % 2 === 0 ? "row-reverse" : "row" }}
+            >
               <div className="group-description" key={index}>
                 <div className="group-header">
-                  <Icon size={32} />
-                  <h3>{group.name}</h3>
+                  <Icon
+                    size={40}
+                    style={{
+                      backgroundColor: "var(--clr-secondary-400)",
+                      color: "white",
+                      padding: "8px",
+                      borderRadius: "10px",
+                    }}
+                  />
+                  <h3
+                    style={{
+                      fontSize: "24px",
+                      color: "var(--clr-secondary-400)",
+                    }}
+                  >
+                    {group.name}
+                  </h3>
                 </div>
-                <h4>{group.title}</h4>
-                <p>{group.description}</p>
+                <h1 style={{fontSize: "40px", color: "var(--clr-primary-800)"}}>{group.title}</h1>
+                <p style={{maxWidth: "520px"}}>{group.description}</p>
                 <div className="tags">
                   {group.tags.map((tag) => (
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
-                <button>{group.button}</button>
+                <div className="group-button centerFlex">{group.button}</div>
               </div>
               <img src={group.photo} alt="" />
             </div>

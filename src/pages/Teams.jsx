@@ -1,5 +1,6 @@
 import HeroCarousel from "../components/HeroCarousel"
 import Navigation from "../components/Navigation"
+import Footer from "../components/Footer"
 
 function Teams () {
     return (
@@ -8,6 +9,9 @@ function Teams () {
             <main>
                 <HeroCarousel/>
             </main>
+            <footer>
+                <Footer />
+            </footer>
         </div>
     )
 }

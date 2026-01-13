@@ -21,3 +21,20 @@
 .visionStatement u {
     color: var(--clr-primary-300);
 }
+
+/* group cards */
+
+.group-card {
+    max-width: 1310px;
+    padding: 20px;
+
+    background-color: hsl(from var(--clr-primary-400) h s l / 0.2);
+    border: 2px solid var(--clr-secondary-400);
+    border-radius: 20px;
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

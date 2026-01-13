@@ -1,5 +1,7 @@
 import Msg from "../assets/Msg.svg";
 import TeamPhoto from "../assets/TeamPhoto.svg";
+import Grass_1 from "../assets/grass_1.svg";
+import Grass_2 from "../assets/grass_2.svg";
 import { Rocket, BookCopy } from "lucide-react";
 import "./HomeBody.css";
 
@@ -37,11 +39,15 @@ function HomeBody() {
           <img src={Msg} alt="A message bubble image" />
         </div>
 
-        <p className="visionStatement">
-          We aim to drive meaningful change and to build a vibrant community of
-          passionate learners through <u>events</u>, hands-on <u>projects</u>,
-          and <u>advocacy</u>.
-        </p>
+        <div className="centerFlex" style={{gap: "20px"}}>
+          <img src={Grass_1} alt="A doodle of a small leaf" />
+          <p className="visionStatement">
+            We aim to drive meaningful change and to build a vibrant community
+            of passionate learners through <u>events</u>, hands-on{" "}
+            <u>projects</u>, and <u>advocacy</u>.
+          </p>
+          <img src={Grass_2} alt="A doodle of a small leaf" />
+        </div>
       </div>
 
       <div
@@ -76,8 +82,12 @@ function HomeBody() {
                     {group.name}
                   </h3>
                 </div>
-                <h1 style={{fontSize: "40px", color: "var(--clr-primary-800)"}}>{group.title}</h1>
-                <p style={{maxWidth: "520px"}}>{group.description}</p>
+                <h1
+                  style={{ fontSize: "40px", color: "var(--clr-primary-800)" }}
+                >
+                  {group.title}
+                </h1>
+                <p style={{ maxWidth: "520px" }}>{group.description}</p>
                 <div className="tags">
                   {group.tags.map((tag) => (
                     <span key={tag}>{tag}</span>

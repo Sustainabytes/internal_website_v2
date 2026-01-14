@@ -1,8 +1,8 @@
 import "./Herocarousel.css";
 import { useState } from "react";
 
-import Clara from "../assets/ClaraGomes.svg";
-import ClaraVector from "../assets/ClaraVector.svg";
+import Carla from "../assets/CarlaGomes.svg";
+import CarlaVector from "../assets/CarlaVector.svg";
 import Frame from "../assets/MemberFrame.svg"
 import Mail from "../assets/Mail.svg"
 import Arrow from "../assets/OurTeamsArrow.svg"
@@ -97,7 +97,7 @@ function HeroCarousel() {
 
     const slides = [
     {
-        img: Clara,
+        img: Carla,
         title: "E-Board",
         desc: "Description here",
         scroll: "eboard",
@@ -109,7 +109,7 @@ function HeroCarousel() {
         scroll: "operations",
     },
     {
-        img: ClaraVector,
+        img: CarlaVector,
         title: "Data Analytics",
         desc: "Description here 3",
         scroll: "data-analytics",
@@ -154,14 +154,14 @@ function HeroCarousel() {
             />
 
 
-            <div className="claraSection">
-                <div className="claraLeftside">
-                    <img src={Clara} alt="Clara Gomes" className="claraPic"/>
-                    <img src={ClaraVector} className="claraVec"/>
+            <div className="carlaSection">
+                <div className="carlaLeftside">
+                    <img src={Carla} alt="Carla Gomes" className="carlaPic"/>
+                    <img src={CarlaVector} className="carlaVec"/>
                 </div>
 
-                <div className="claraRightside">
-                    <h2 className=" font-sans"><span className="advisor">Advisor</span> Clara Gomes</h2>
+                <div className="carlaRightside">
+                    <h2 className=" font-sans"><span className="advisor">Advisor</span> Carla Gomes</h2>
                     <h4>Director of the Institute for Computational Sustainability at Cornell University</h4>
                 </div>
             </div>
@@ -190,6 +190,8 @@ function HeroCarousel() {
                         { name: "Kalia C.", role: "Treasurer", email: "kc2274@cornell.edu" }, 
                         { name: "Kaavya P.", role: "Business", email: "kp627@cornell.edu" }, 
                         { name: "Aish M.", role: "External Affairs", email: "am3369@cornell.edu" }, 
+                        { name: "RECRUITING", role: "Social Coordinator", email: "Apply today!" }, 
+                        { name: "RECRUITING", role: "Interal Affairs", email: "Apply today!" }
                     ]}
                 />
                 <TeamsSection

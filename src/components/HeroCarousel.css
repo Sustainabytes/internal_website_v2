@@ -115,7 +115,7 @@ html, body {
 
 
 
-.claraSection {
+.carlaSection {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -127,19 +127,19 @@ html, body {
     padding-bottom: 10%;
 }
 
-.claraLeftside {
+.carlaLeftside {
     position: relative;
     width: clamp(260px, 28vw, 380px);
     aspect-ratio: 1 / 1;
 }
 
-.claraPic {
+.carlaPic {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.claraVec {
+.carlaVec {
     position: absolute;
     inset: 0;
     width: 140%;
@@ -149,7 +149,7 @@ html, body {
 }
 
 
-.claraRightside h2 {
+.carlaRightside h2 {
     font-size: 48px;
     font-weight: 600;
     color: var(--clr-primary-600);
@@ -157,7 +157,7 @@ html, body {
     padding-bottom: 30px;
 }
 
-.claraRightside h4 {
+.carlaRightside h4 {
     font-size: 24px;
     font-weight: 200;
     color: var(--clr-secondary-400);

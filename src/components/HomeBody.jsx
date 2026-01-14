@@ -9,7 +9,7 @@ function HomeBody() {
   const groups = [
     {
       icon: Rocket,
-      name: "Working Groups",
+      name: "Technical Teams",
       title: "Upskill Through Service",
       description:
         "Through Working Groups, we apply data analytics and software engineering to real-world sustainability and serve the local area.",
@@ -22,7 +22,7 @@ function HomeBody() {
       name: "Education",
       title: "Professional Development",
       description:
-        "Participate in socials, networking events, career panels, and guest speakers. ",
+        "Participate in socials, networking events, career panels, and guest speakers. We aim to cultivate a computational sustainability community at Cornell and beyond. ",
       tags: ["Network", "Career Development", "Guest Speakers"],
       button: "Event Timeline",
       photo: TeamPhoto,
@@ -39,7 +39,7 @@ function HomeBody() {
           <img src={Msg} alt="A message bubble image" />
         </div>
 
-        <div className="centerFlex" style={{gap: "20px"}}>
+        <div className="centerFlex" style={{ gap: "20px" }}>
           <img src={Grass_1} alt="A doodle of a small leaf" />
           <p className="visionStatement">
             We aim to drive meaningful change and to build a vibrant community
@@ -100,6 +100,10 @@ function HomeBody() {
           );
         })}
       </div>
+
+      {/* <div className="community centerFlex">
+        <h1>Building a community</h1>
+      </div> */}
     </>
   );
 }

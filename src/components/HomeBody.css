@@ -71,6 +71,10 @@
     font-weight: 600;
 }
 
+.groupPhoto {
+    max-width: 700px;
+}
+
 .community {
     height: 884px;
 }

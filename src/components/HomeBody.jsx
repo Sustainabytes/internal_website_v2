@@ -1,5 +1,6 @@
 import Msg from "../assets/Msg.svg";
 import TeamPhoto from "../assets/TeamPhoto.svg";
+import TechnicalTeams from "../assets/TechnicalTeams.png";
 import Grass_1 from "../assets/grass_1.svg";
 import Grass_2 from "../assets/grass_2.svg";
 import { Rocket, BookCopy } from "lucide-react";
@@ -15,7 +16,7 @@ function HomeBody() {
         "Through Working Groups, we apply data analytics and software engineering to real-world sustainability and serve the local area.",
       tags: ["Data Analytics", "Web Dev", "Community Impact"],
       button: "Learn More",
-      photo: TeamPhoto,
+      photo: TechnicalTeams,
     },
     {
       icon: BookCopy,
@@ -59,6 +60,7 @@ function HomeBody() {
 
           return (
             <div
+            key={index}
               className="group-card centerFlex"
               style={{ flexDirection: index % 2 === 0 ? "row-reverse" : "row" }}
             >
@@ -95,7 +97,7 @@ function HomeBody() {
                 </div>
                 <div className="group-button centerFlex">{group.button}</div>
               </div>
-              <img src={group.photo} alt="" />
+              <img src={group.photo} alt="" className="groupPhoto" />
             </div>
           );
         })}

@@ -25,6 +25,16 @@ function EduHeroText({ title, desc, onNext }) {
     );
 }
 
+function EduBodyEvent({title, date, desc}) {
+    return (
+        <div className="eventCard">
+            <h2 className="eventTitle">{title}</h2>
+            <h3 className="eventDate">{date}</h3>
+            <h4 className="eventDescription">{desc}</h4>
+        </div>
+    )
+}
+
 
 
 
@@ -50,6 +60,49 @@ function EduSection() {
         }
     ];
 
+    const bodyEvents = [
+        {
+            title: "Information Session 1",
+            date: "Wednesday, January 28th (5:00pm-5:30pm)",
+            desc: (
+                <>
+                    description goes here 1
+                </>
+                
+            )
+        },
+        {
+            title: "Applications Open",
+            date: "Thursday, January 29th",
+            desc: (
+                <>
+                    description goes here 2
+                </>
+                
+            )
+        },
+        {
+            title: "Information Session 2",
+            date: "Tuesday, Febuaray 3rd (5:00pm-6:00pm)",
+            desc: (
+                <>
+                    description goes here 2
+                </>
+                
+            )
+        },
+        {
+            title: "Applications Close",
+            date: "Wednesday, February 4",
+            desc: (
+                <>
+                    description goes here 2
+                </>
+                
+            )
+        },
+    ];
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handleNext = () => {
@@ -59,25 +112,42 @@ function EduSection() {
     };
     
        return (
-        <div className="eduHero">
-            <div className="heroLeft">
-                <div id="heroLeftUpper">
-                    <h1>Education</h1>
-                    <Sprout size={80} id="sprout" />
+        <>
+            <div className="eduHero">
+                <div className="heroLeft">
+                    <div id="heroLeftUpper">
+                        <h1>Education</h1>
+                        <Sprout size={80} id="sprout" />
+                    </div>
+
+                    <div id="heroLeftLower">
+                        <img src={AndSign} id="andSign"/>
+                        <h1 id="engagement">Engagement</h1>
+                    </div>
                 </div>
 
-                <div id="heroLeftLower">
-                    <img src={AndSign} id="andSign"/>
-                    <h1 id="engagement">Engagement</h1>
-                </div>
+                <EduHeroText
+                    title={heroTexts[currentIndex].title}
+                    desc={heroTexts[currentIndex].desc}
+                    onNext={handleNext}
+                />
             </div>
 
-            <EduHeroText
-                title={heroTexts[currentIndex].title}
-                desc={heroTexts[currentIndex].desc}
-                onNext={handleNext}
-            />
-        </div>
+           <div className="eduBody">
+
+                <h2 className="bodyTitle font-sans">Upcoming Events</h2>
+
+                {bodyEvents.map((event, index) => (
+                    <EduBodyEvent
+                        key={index}
+                        title={event.title}
+                        date={event.date}
+                        desc={event.desc}
+                    />
+                ))}
+            </div>
+
+        </>
     );
 }
 

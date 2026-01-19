@@ -71,3 +71,42 @@ html, body {
 .pink {
     color: #EF71E5;
 }
+
+.eduBody {
+    padding-top: 70px;
+    padding-bottom: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+.bodyTitle {
+    font-size: 48px;
+    font-weight: 600;
+    color: #EF71E5;
+}
+
+.eventCard {
+    background-image: linear-gradient(to bottom, #FCFFF5, var(--clr-primary-300));
+    width: 90%;
+    padding: 40px;
+}
+
+.eventTitle {
+    font-size: 48px;
+    font-weight: 100;
+    color: var(--clr-secondary-400)
+}
+
+.eventDate {
+    font-size: 24px;
+    font-weight: 100;
+    color: #7EB3F8;
+}
+
+.eventDescription {
+    font-size: 24px;
+    font-weight: 100;
+    color: var(--clr-primary-600);
+}

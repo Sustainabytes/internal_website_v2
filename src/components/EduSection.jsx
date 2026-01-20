@@ -15,12 +15,11 @@ function EduHeroText({ title, desc, onNext }) {
 
                 <img
                     src={NextArrow}
-                    alt="nextArrow"
                     className="nestArrow"
                     onClick={onNext}
-                    style={{ cursor: "pointer" }}
                 />
             </div>
+
         </div>
     );
 }
@@ -62,41 +61,11 @@ function EduSection() {
 
     const bodyEvents = [
         {
-            title: "Information Session 1",
-            date: "Wednesday, January 28th (5:00pm-5:30pm)",
+            title: "More Information Coming Soon",
+            date: "Stay Tuned!",
             desc: (
                 <>
-                    description goes here 1
-                </>
-                
-            )
-        },
-        {
-            title: "Applications Open",
-            date: "Thursday, January 29th",
-            desc: (
-                <>
-                    description goes here 2
-                </>
-                
-            )
-        },
-        {
-            title: "Information Session 2",
-            date: "Tuesday, Febuaray 3rd (5:00pm-6:00pm)",
-            desc: (
-                <>
-                    description goes here 2
-                </>
-                
-            )
-        },
-        {
-            title: "Applications Close",
-            date: "Wednesday, February 4",
-            desc: (
-                <>
-                    description goes here 2
+                    
                 </>
                 
             )

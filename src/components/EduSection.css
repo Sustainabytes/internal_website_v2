@@ -47,7 +47,12 @@ html, body {
     display: flex;
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+
 
 #heroTitle {
     color: #00AD3D;
@@ -59,14 +64,20 @@ html, body {
 
 #herodesc {
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: 30px;
-    padding-right: 30px;
     font-size: 24px;
     font-weight: 100;
     color: var(--clr-secondary-400);
 }
+
+
+.nestArrow {
+    padding-left: 10px;
+}
+
+
+
+
+
 
 .pink {
     color: #EF71E5;

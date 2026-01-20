@@ -72,7 +72,24 @@ html, body {
     aspect-ratio: 10 / 6;
     border-radius: 15px;
     box-shadow: 13px 13px 7px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    object-position: center;
+    
 }
+
+.flashcard img {
+    width: 100%;
+    height: 100%;
+    max-width: none;     /* 🔑 removes intrinsic constraint */
+    max-height: none;
+    margin: 0;           /* 🔑 removes default inline spacing */
+    padding: 0;
+
+    object-fit: cover;  /* or contain */
+    object-position: center center;
+    display: block;
+}
+
 
 .heroRightside {
     display: flex;

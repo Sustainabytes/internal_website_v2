@@ -8,6 +8,7 @@ import Mail from "../assets/Mail.svg"
 import Arrow from "../assets/OurTeamsArrow.svg"
 import NextArrow from "../assets/NextArrow.svg"
 import BackArrow from "../assets/BackArrow.svg"
+import TeamPhoto from "../assets/TeamPhoto.svg"
 
 function TeamsSection({ id, backColor, textColor, text, arr }) {
     return (
@@ -97,33 +98,33 @@ function HeroCarousel() {
 
     const slides = [
     {
-        img: Carla,
+        img: TeamPhoto,
         title: "E-Board",
-        desc: "Description here",
+        desc: "Founders",
         scroll: "eboard",
     },
     {
-        img: Mail,
+        img: TeamPhoto,
         title: "Operations",
-        desc: "Description here 2",
+        desc: "Organization Vision & Direction",
         scroll: "operations",
     },
     {
-        img: CarlaVector,
+        img: TeamPhoto,
         title: "Data Analytics",
-        desc: "Description here 3",
+        desc: "Computation and Machine Learning",
         scroll: "data-analytics",
     },
     {
-        img: Frame,
+        img: TeamPhoto,
         title: "Engagement and Education",
-        desc: "Description here 4",
+        desc: "Professional Development and Events",
         scroll: "engagement-education",
     },
     {
-        img: Arrow,
+        img: TeamPhoto,
         title: "Web Development",
-        desc: "Description here 5",
+        desc: "Software and Apps",
         scroll: "web-dev",
     },
     ];

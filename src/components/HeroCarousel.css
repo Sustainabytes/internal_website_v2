@@ -260,12 +260,13 @@ html, body {
     font-size: clamp(24px, 1.6vw, 20px);
 }
 
-.aboveFrame img {
+.aboveFrame > .emailBtn > .emailImg {
     position: absolute;
     bottom: 10%;
     left: 80%;
     transform: translateX(-50%);
 }
+
 
 .emailBtn {
     position: absolute;
@@ -294,7 +295,31 @@ html, body {
     z-index: 1;
 }
 
-.emailBtn:hover .emailLink {
+.linkedInImg {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+
+    height: 30px;
+    opacity: 0;
+    transition: all 0.25s ease;
+    z-index: 2;
+}
+
+.portfolioImg {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    height: 30px;
+    opacity: 0;
+    transition: all 0.25s ease;
+    z-index: 3;
+}
+
+
+.emailBtn:hover .emailLink,
+.emailBtn:hover .linkedInImg,
+.emailBtn:hover .portfolioImg{
     opacity: 1;
     transform: scaleX(1);
 }

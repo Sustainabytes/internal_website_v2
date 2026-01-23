@@ -9,6 +9,7 @@ import Arrow from "../assets/OurTeamsArrow.svg"
 import NextArrow from "../assets/NextArrow.svg"
 import BackArrow from "../assets/BackArrow.svg"
 import TeamPhoto from "../assets/TeamPhoto.svg"
+import linkedInImg from "../assets/LinkedIn_icon.png"
 
 function TeamsSection({ id, backColor, textColor, text, arr }) {
     return (
@@ -24,6 +25,8 @@ function TeamsSection({ id, backColor, textColor, text, arr }) {
                         name={member.name}
                         role={member.role}
                         email={member.email}
+                        linkedIn={member.linkedIn}
+                        portfolio={member.portfolio}
                         color={textColor}
                     />
                 ))}
@@ -33,7 +36,7 @@ function TeamsSection({ id, backColor, textColor, text, arr }) {
 }
 
 
-function MemberPhoto({ name, role, email, color }) {
+function MemberPhoto({ name, role, email, linkedIn = "", portfolio = "", color }) {
     return (
         <div className="memPhoto">
             <div className="aboveFrame">
@@ -41,7 +44,20 @@ function MemberPhoto({ name, role, email, color }) {
                 <h4 style={{ color }}>{name}</h4>
                 <div className="emailBtn">
                     <img src={Mail} alt="Mail" className="emailImg"/>
-                    <div className="emailLink" style={{ color }}>{email}</div>
+                    <div className="emailLink" style={{ color }}>{email}                         
+                        {linkedIn && (
+                            <a href={linkedIn}>
+                                <img src={linkedInImg} className="linkedInImg" />
+                            </a>
+                        )}
+                        {portfolio && (
+                            <a href={portfolio}>
+                                <img src={Mail} className="portfolioImg" />
+                            </a>
+                        )}                        
+                    </div>
+
+
                 </div>
             </div>
 
@@ -178,7 +194,7 @@ function HeroCarousel() {
                     textColor="#3111B2"
                     text="E-Board"
                     arr={[{ name: "Tianyi C.", role: "President", email: "tc757@cornell.edu" },
-                        { name: "Kyle C.", role: "Vice President", email: "ksc224@cornell.edu" }, 
+                        { name: "Kyle C.", role: "Vice President", email: "seiyoungchun@gmail.com", linkedIn: "https://www.linkedin.com/in/kyle-chun-50b817244/" }, 
                         { name: "Mikael M-R.", role: "Secretary", email: "mm3446@cornell.edu" }
                     ]}  
                 />
@@ -188,8 +204,8 @@ function HeroCarousel() {
                     textColor="#C9AB27"
                     text="Operations"
                     arr={[{ name: "Jerry C.", role: "Social Media", email: "jc3689@cornell.edu" }, 
-                        { name: "Kalia C.", role: "Treasurer", email: "kc2274@cornell.edu" }, 
-                        { name: "Kaavya P.", role: "Business", email: "kp627@cornell.edu" }, 
+                        { name: "Kalia C.", role: "Treasurer", email: "kc2274@cornell.edu", linkedIn: "https://www.linkedin.com/in/kaliacheung"}, 
+                        { name: "Kaavya P.", role: "Business", email: "kp627@cornell.edu", linkedIn: "https://www.linkedin.com/in/kaavya-paladugu"}, 
                         { name: "Aish M.", role: "External Affairs", email: "am3369@cornell.edu" }, 
                         { name: "RECRUITING", role: "Social Coordinator", email: "Apply today!" }, 
                         { name: "RECRUITING", role: "Interal Affairs", email: "Apply today!" }
@@ -201,9 +217,9 @@ function HeroCarousel() {
                     textColor="#51B976"
                     text="Data Analytics"
                     arr={[{ name: "Seokyun H.", role: "Lead", email: "sh2656@cornell.edu" }, 
-                        { name: "Abby C.", role: "Lead", email: "aac265@cornell.edu" }, 
-                        { name: "Eric Z.", role: "Member", email: "ez323@cornell.edu" }, 
-                        { name: "Minh T.", role: "Member", email: "tt536@cornell.edu" }, 
+                        { name: "Abby C.", role: "Lead", email: "aac265@cornell.edu", linkedIn: "https://www.linkedin.com/in/abigail-childs-6a6599271/?skipRedirect=true" }, 
+                        { name: "Eric Z.", role: "Member", email: "ez323@cornell.edu", linkedIn: "https://www.linkedin.com/in/eric-zhu-501392298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }, 
+                        { name: "Minh T.", role: "Member", email: "nt428@cornell.edu", linkedIn: "https://www.linkedin.com/in/nhat-minh-tran-ngoc-1b90642a9/"}, 
                     ]}
                 />
                 <TeamsSection
@@ -211,8 +227,8 @@ function HeroCarousel() {
                     backColor="linear-gradient(90deg, #FBBEF6, #FAF5F9)"
                     textColor="#EF71E5"
                     text="Engagement and Education"
-                    arr={[{ name: "Tristan A.", role: "Member", email: "tja75@cornell.edu" },
-                        { name: "Jimmy Z.", role: "Member", email: "yz3439@cornell.edu" }
+                    arr={[{ name: "Tristan A.", role: "Member", email: "" },
+                        { name: "Jimmy Z.", role: "Member", email: "" }
                     ]}
                 />
                 <TeamsSection
@@ -220,12 +236,12 @@ function HeroCarousel() {
                     backColor="linear-gradient(90deg, #BED8FB, #F5F8FA)"
                     textColor="#7EB3F8"
                     text="Web Development"
-                    arr={[{ name: "Arsh K.", role: "Lead", email: "ak2676@cornell.edu" },
+                    arr={[{ name: "Arsh K.", role: "Lead", email: "ak2676@cornell.edu", linkedIn: "https://linkedin.com/in/arshdeepkaur13", portfolio: "https://www.arshdeepk.com/" },
                         { name: "Cinnie L.", role: "Lead", email: "cl2728@cornell.edu" },
                         { name: "Winnie C.", role: "Lead", email: "email2@email.com" },
-                        { name: "Amanda Z.", role: "Member", email: "az565@cornell.edu" },
-                        { name: "Anusha K.", role: "Member", email: "wc697@cornell.edu" },
-                        { name: "Willow C.", role: "Member", email: "ark279@cornell.edu" }
+                        { name: "Amanda Z.", role: "Member", email: "az565@cornell.edu", linkedIn: "https://www.linkedin.com/in/amanda-zhu-3a0680279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+                        { name: "Anusha K.", role: "Member", email: "ark279@cornell.edu" },
+                        { name: "Willow C.", role: "Member", email: "wc697@cornell.edu", linkedIn: "https://www.linkedin.com/in/willowchen29"}
                     ]}
                 />
             </div>

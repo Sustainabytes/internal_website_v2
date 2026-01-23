@@ -1,0 +1,9 @@
+.projectHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    height: 700px;
+    background-image: linear-gradient(to bottom, #C9EFCF, var(--clr-primary-300));
+    padding: 200px;
+}

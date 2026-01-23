@@ -1,4 +1,4 @@
-import "./Herocarousel.css";
+import "./HeroCarousel.css";
 import { useState } from "react";
 
 import Carla from "../assets/CarlaGomes.svg";

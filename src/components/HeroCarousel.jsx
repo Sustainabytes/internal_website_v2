@@ -25,9 +25,10 @@ import KyleC from "../assets/KyleChun.png"
 import TianyiC from "../assets/TianyiChen.png"
 import JerryC from "../assets/JerryChen.png"
 import AishM from "../assets/AishMarieswaran.png"
+import JimmyZ from "../assets/jimmyZhong.jpeg"
 import Filler from "../assets/fillerHeadshot.png"
 import Globe from "../assets/Globe.svg"
-
+import TristanA from "../assets/TristanAlbano.jpeg"
 
 function TeamsSection({ id, backColor, textColor, text, arr }) {
     return (
@@ -279,8 +280,8 @@ function HeroCarousel() {
                     backColor="linear-gradient(90deg, #FBBEF6, #FAF5F9)"
                     textColor="#EF71E5"
                     text="Engagement and Education"
-                    arr={[{ name: "Tristan A.", role: "Member", email: "tja75@cornell.edu" },
-                        { name: "Jimmy Z.", role: "Member", email: "" }
+                    arr={[{ name: "Tristan A.", role: "Member", email: "tja75@cornell.edu", photo: TristanA },
+                        { name: "Jimmy Z.", role: "Member", email: "yz3439@cornell.edu", photo: JimmyZ }
                     ]}
                 />
                 <TeamsSection
@@ -292,7 +293,7 @@ function HeroCarousel() {
                         { name: "Cinnie L.", role: "Lead", email: "cl2728@cornell.edu", linkedIn: "https://www.linkedin.com/in/cinnie-lin-287671351", photo: CinnieL},
                         { name: "Winnie C.", role: "Lead", email: "wc679@cornell.edu" },
                         { name: "Amanda Z.", role: "Member", email: "az565@cornell.edu", linkedIn: "https://www.linkedin.com/in/amanda-zhu-3a0680279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", photo: AmandaZ},
-                        { name: "Anusha K.", role: "Member", email: "ark279@cornell.edu" },
+                        { name: "Anusha K.", role: "Member", email: "ark279@cornell.edu", linkedIn: "https://www.linkedin.com/in/anusha-kundargi/" },
                         { name: "Willow C.", role: "Member", email: "wc697@cornell.edu", linkedIn: "https://www.linkedin.com/in/willowchen29", photo: WillowC}
                     ]}
                 />

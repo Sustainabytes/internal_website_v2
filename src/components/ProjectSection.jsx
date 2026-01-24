@@ -26,11 +26,11 @@ function ProjectSection() {
       <div className="projectContainer centerFlex column">
         {projects.map((project, index) => (
         <div key={index} className="centerFlex projectCard">
-          <div className="image-container">
+          <div className="image-container centerFlex column">
             <img src={project.logo} alt="The project logo" style={{height: "100%", width: "100%"}}/>
+            <h2>{project.title}</h2>
           </div>
           <div className="column card-bio">
-            <h2>{project.title}</h2>
             <img src={project.description} style={{maxWidth: "40vw"}} />
           </div>
         </div>

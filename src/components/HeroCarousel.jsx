@@ -56,6 +56,17 @@ function TeamsSection({ id, backColor, textColor, text, arr }) {
 
 
 function MemberPhoto({ name, role, email, linkedIn = "", portfolio = "", color, photo = Filler}) {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(email);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+    };
+
+    const isEmail = email && email.includes("@");
+
+
     return (
         <div className="memPhoto">
             <div className="aboveFrame">
@@ -63,7 +74,21 @@ function MemberPhoto({ name, role, email, linkedIn = "", portfolio = "", color, 
                 <h4 style={{ color }}>{name}</h4>
                 <div className="emailBtn">
                     <img src={Mail} alt="Mail" className="emailImg"/>
-                    <div className="emailLink" style={{ color }}>{email}                         
+                    <div
+                        className="emailLink"
+                        style={{ color, cursor: isEmail ? "pointer" : "default" }}
+                        onClick={isEmail ? handleCopy : undefined}
+                    >
+                        {email}
+
+                        {isEmail && (
+                            copied ? (
+                                <h5>Copied Email!</h5>
+                            ) : (
+                                <h5>Click to Copy Email</h5>
+                            )
+                        )}
+                                        
                         {linkedIn && (
                             <a href={linkedIn}>
                                 <img src={linkedInImg} className="linkedInImg" />

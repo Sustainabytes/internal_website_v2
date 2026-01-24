@@ -82,12 +82,12 @@ html, body {
 .flashcard img {
     width: 100%;
     height: 100%;
-    max-width: none;     /* 🔑 removes intrinsic constraint */
+    max-width: none;     
     max-height: none;
-    margin: 0;           /* 🔑 removes default inline spacing */
+    margin: 0;          
     padding: 0;
 
-    object-fit: cover;  /* or contain */
+    object-fit: cover;  
     object-position: center center;
     display: block;
 }
@@ -316,7 +316,7 @@ html, body {
 
 .linkedInImg {
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: 0px;
 
     height: 30px;
@@ -327,7 +327,7 @@ html, body {
 
 .portfolioImg {
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: 35px;
     height: 30px;
     opacity: 0;
@@ -342,5 +342,6 @@ html, body {
     opacity: 1;
     transform: scaleX(1);
 }
+
 
 

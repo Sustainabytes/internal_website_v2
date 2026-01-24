@@ -29,7 +29,13 @@ function Navigation() {
         </ul>
       </div>
       <div className="apply centerFlex">
-        <p>Apply!</p>
+        <a
+          href="https://forms.gle/Xz8tnGbQK4EKTQrQ8"
+          target="_blank"
+          style={{ color: "var(--clr-neutral-100)", textDecoration: "none" }}
+        >
+          <p>Apply!</p>
+        </a>
       </div>
     </nav>
   );

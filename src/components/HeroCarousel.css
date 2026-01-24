@@ -1,6 +1,28 @@
-body {
+html, body {
+    width: 100%;
     overflow-x: hidden;
+    margin: 0;
+    scroll-behavior: smooth;
+    touch-action: pan-y;
 }
+
+.heroMainBlock,
+.aboveFrame {
+    pointer-events: none;
+}
+
+.emailBtn,
+.backArrow,
+.nextArrow,
+.membersBtn {
+    pointer-events: auto;
+}
+
+.backArrow,
+.nextArrow {
+    touch-action: manipulation;
+}
+
 
 
 .heroCarousel {

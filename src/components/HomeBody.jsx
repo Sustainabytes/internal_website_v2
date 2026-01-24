@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Msg from "../assets/Msg.svg";
 import EcoFest from "../assets/ecoFest.svg";
 import TechnicalTeams from "../assets/TechnicalTeams.png";
@@ -15,16 +16,18 @@ function HomeBody() {
       description:
         "Through Working Groups, we apply data analytics and software engineering to real-world sustainability and serve the local area.",
       tags: ["Data Analytics", "Web Dev", "Community Impact"],
+      path: "/team",
       button: "Learn More",
       photo: TechnicalTeams,
     },
     {
       icon: BookCopy,
-      name: "Education",
+      name: "Education & Engagement",
       title: "Professional Development",
       description:
         "Participate in socials, networking events, career panels, and guest speakers. We aim to cultivate a computational sustainability community at Cornell and beyond. ",
       tags: ["Network", "Career Development", "Guest Speakers"],
+      path: "/education",
       button: "Event Timeline",
       photo: EcoFest,
     },
@@ -46,8 +49,13 @@ function HomeBody() {
             alt="A doodle of a small leaf"
             className="grassDoodle"
           />
-          <div className="centerFlex column" style={{gap: "10px"}}>
-            <h2 style={{color: "var(--clr-neutral-100)", fontSize: "font-size: clamp(1rem, 2vw, 1.5rem)"}}>
+          <div className="centerFlex column" style={{ gap: "10px" }}>
+            <h2
+              style={{
+                color: "var(--clr-neutral-100)",
+                fontSize: "font-size: clamp(1rem, 2vw, 1.5rem)",
+              }}
+            >
               <em>
                 Cornell's first Computational Sustainability Club (founded 2024)
               </em>
@@ -107,17 +115,15 @@ function HomeBody() {
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
-                <div className="group-button centerFlex">{group.button}</div>
+                <Link to={group.path} style={{ textDecoration: "none" }}>
+                  <div className="group-button centerFlex">{group.button}</div>
+                </Link>
               </div>
               <img src={group.photo} alt="" className="groupPhoto" />
             </div>
           );
         })}
       </div>
-
-      {/* <div className="community centerFlex">
-        <h1>Building a community</h1>
-      </div> */}
     </>
   );
 }

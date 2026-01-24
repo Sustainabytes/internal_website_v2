@@ -215,9 +215,9 @@ html, body {
 .teamMembers {
     padding-top: 5%;
     padding-bottom: 5%;
-    width: 90%;
+    width: 80%;
     display: flex;
-    gap: 71px;
+    gap: 200px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -225,7 +225,7 @@ html, body {
 
 .memPhoto {
     position: relative;
-    width: clamp(260px, 30vw, 420px);
+    width: clamp(260px, 30vw, 300px);
     aspect-ratio: 1 / 1;
 }
 
@@ -242,8 +242,8 @@ html, body {
     position: absolute;
     top: 43%;
     left: 50%;
-    width: 90%;
-    height: 75%;
+    width: 89%;
+    height: 79%;
     transform: translate(-50%, -50%);
     object-fit: cover;
     border-radius: 10px;
@@ -309,7 +309,7 @@ html, body {
     transform: scaleX(0);
     transform-origin: left;
     transition: all 0.25s ease;
-    z-index: 1;
+    z-index: 10;
 }
 
 .linkedInImg {

@@ -25,6 +25,7 @@ import KyleC from "../assets/KyleChun.png"
 import TianyiC from "../assets/TianyiChen.png"
 import JerryC from "../assets/JerryChen.png"
 import AishM from "../assets/AishMarieswaran.png"
+import Filler from "../assets/fillerHeadshot.png"
 
 
 function TeamsSection({ id, backColor, textColor, text, arr }) {
@@ -53,7 +54,7 @@ function TeamsSection({ id, backColor, textColor, text, arr }) {
 }
 
 
-function MemberPhoto({ name, role, email, linkedIn = "", portfolio = "", color, photo = Mail}) {
+function MemberPhoto({ name, role, email, linkedIn = "", portfolio = "", color, photo = Filler}) {
     return (
         <div className="memPhoto">
             <div className="aboveFrame">

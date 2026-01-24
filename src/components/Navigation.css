@@ -87,6 +87,10 @@ nav {
         gap: 50px; 
     }
 
+    .link, .apply-btn {
+        font-size: 30px;
+    }
+
     .mobile-only {
         display: block;
     }

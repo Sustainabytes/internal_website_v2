@@ -1,6 +1,6 @@
 .footer {
-    height: 310px;
-    width: 100vw;
+    min-height: 310px;
+    width: 100%;
     background-color: var(--clr-primary-300);
 
     gap: 60px;
@@ -14,7 +14,7 @@
 }
 
 .footer-header h1 {
-    font-size: 18px;
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
     font-weight: 700;
     color: var(--clr-primary-400);
 }
@@ -30,7 +30,7 @@
 
 .mission {
     max-width: 770px;
-    font-size: 18px;
+    font-size: clamp(0.875rem, 1.2vw, 1.125rem);
 
     text-align: center;
 }
@@ -43,6 +43,33 @@
     gap: 10px;
 
     font-family: 'Open Sans', sans-serif;
+    font-size: clamp(0.688rem, 1vw, 0.875rem);
     font-weight: 100;
     color: var(--clr-primary-600);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-header {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-header > div:first-child {
+        display: none;
+    }
+
+    .footer-header > div {
+        flex: none !important;
+        justify-content: center !important;
+    }
+
+    .cornellStatement {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
 }

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import NavLogo from "../assets/NavLogo.svg";
+import NavLogo from "../assets/NavLogo.png";
 import "./Navigation.css";
 
 function Navigation() {
@@ -16,7 +16,7 @@ function Navigation() {
           to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <img src={NavLogo} alt="The logo of Cornell's COmputational club" />
+          <img src={NavLogo} alt="The logo of Cornell's Computational club" />
         </Link>
       </div>
       <div className="links">

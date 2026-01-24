@@ -1,4 +1,4 @@
-import SUSBLogo from "../assets/SUSB_Logo.svg";
+import SUSBLogo from "../assets/SUSB_Logo.png";
 import FooterHeader from "../assets/Footer-divider.svg";
 import {Sprout} from "lucide-react";
 import "./Footer.css";

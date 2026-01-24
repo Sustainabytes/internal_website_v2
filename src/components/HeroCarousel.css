@@ -351,9 +351,6 @@
     width: 95%;
   }
 
-  .heroRightside {
-    width: 80%;
-  }
 
   .heroRightside h2 {
     font-size: 32px;
@@ -400,12 +397,17 @@
   }
 
   .teamMembers {
-    gap: 80px;
+    gap: 100px;
     padding-top: 40px;
   }
 
   .memPhoto {
     width: 260px;
+  }
+
+  .emailLink {
+    top: 20px;
+    left: -160px;
   }
 }
 
@@ -434,8 +436,13 @@
   }
 
   .teamMembers {
-    gap: 60px;
+    gap: 80px;
     width: 90vw;
+  }
+
+  .emailLink {
+    top: 20px;
+    left: -160px;
   }
 
   .backArrow,

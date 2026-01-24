@@ -27,7 +27,7 @@ function ProjectSection() {
         {projects.map((project, index) => (
         <div key={index} className="centerFlex projectCard">
           <div className="image-container centerFlex column">
-            <img src={project.logo} alt="The project logo" style={{height: "100%", width: "100%"}}/>
+            <img src={project.logo} alt="The project logo"/>
             <h2>{project.title}</h2>
           </div>
           <div className="column card-bio">

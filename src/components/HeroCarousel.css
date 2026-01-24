@@ -46,14 +46,14 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5%;
-    padding: 3%;
+    gap: 11%;
+    padding: 5%;
 }
 
 .backArrow {
     position: absolute;
     top: 50%;
-    left: 6%;
+    left: 3%;
     transform: translateY(-50%);
     cursor: pointer;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
@@ -61,6 +61,7 @@ html, body {
 
 
 .nextArrow {
+    cursor: pointer;
     position: absolute;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
 }
@@ -70,7 +71,6 @@ html, body {
 }
 
 .flashcard {
-    aspect-ratio: 10 / 6;
     border-radius: 15px;
     overflow: hidden;
     object-position: center;
@@ -128,6 +128,8 @@ html, body {
     background-color: var(--clr-secondary-300);
     height: 51px;
     width: 208px;
+
+    cursor: pointer;
 }
 
 

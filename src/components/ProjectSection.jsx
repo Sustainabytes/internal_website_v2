@@ -1,21 +1,20 @@
 import "./ProjectSection.css";
+import ReUse from "../assets/projectLogos/Reuse.svg";
+import MogheLab from "../assets/projectLogos/MogheLab.svg";
+import ReUseBio from "../assets/ReUseBio.svg"
+import RubiBio from "../assets/RubiBio.svg"
 
 function ProjectSection() {
   const projects = [
     {
       title: "ReUse",
-      description:
-        "TCamp is an organizartion that focuses on saving the lives of amphibians during their migration",
+      logo: ReUse,
+      description: ReUseBio,
     },
     {
-      title: "Rubi",
-      description:
-        "TCamp is an organizartion that focuses on saving the lives of amphibians during their migration",
-    },
-    {
-      title: "TCamp",
-      description:
-        "TCamp is an organizartion that focuses on saving the lives of amphibians during their migration",
+      title: "MogheLab",
+      logo: MogheLab,
+      description: RubiBio,
     },
   ];
 
@@ -27,10 +26,12 @@ function ProjectSection() {
       <div className="projectContainer centerFlex column">
         {projects.map((project, index) => (
         <div key={index} className="centerFlex projectCard">
-          <div className="image-container"></div>
-          <div className="centerFlex column">
-            <h1>{project.title}</h1>
-            <p>{project.description}</p>
+          <div className="image-container">
+            <img src={project.logo} alt="The project logo" style={{height: "100%", width: "100%"}}/>
+          </div>
+          <div className="column card-bio">
+            <h2>{project.title}</h2>
+            <img src={project.description} style={{maxWidth: "40vw"}} />
           </div>
         </div>
       ))}

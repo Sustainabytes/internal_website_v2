@@ -1,5 +1,5 @@
 import Msg from "../assets/Msg.svg";
-import TeamPhoto from "../assets/TeamPhoto.svg";
+import EcoFest from "../assets/ecoFest.svg";
 import TechnicalTeams from "../assets/TechnicalTeams.png";
 import Grass_1 from "../assets/grass_1.svg";
 import Grass_2 from "../assets/grass_2.svg";
@@ -26,7 +26,7 @@ function HomeBody() {
         "Participate in socials, networking events, career panels, and guest speakers. We aim to cultivate a computational sustainability community at Cornell and beyond. ",
       tags: ["Network", "Career Development", "Guest Speakers"],
       button: "Event Timeline",
-      photo: TeamPhoto,
+      photo: EcoFest,
     },
   ];
 

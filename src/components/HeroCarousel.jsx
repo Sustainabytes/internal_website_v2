@@ -26,6 +26,7 @@ import TianyiC from "../assets/TianyiChen.png"
 import JerryC from "../assets/JerryChen.png"
 import AishM from "../assets/AishMarieswaran.png"
 import Filler from "../assets/fillerHeadshot.png"
+import Globe from "../assets/Globe.svg"
 
 
 function TeamsSection({ id, backColor, textColor, text, arr }) {
@@ -70,7 +71,7 @@ function MemberPhoto({ name, role, email, linkedIn = "", portfolio = "", color, 
                         )}
                         {portfolio && (
                             <a href={portfolio}>
-                                <img src={Mail} className="portfolioImg" />
+                                <img src={Globe} className="portfolioImg" />
                             </a>
                         )}                        
                     </div>

@@ -86,7 +86,7 @@ function EduSection() {
                 <div className="heroLeft">
                     <div id="heroLeftUpper">
                         <h1>Education</h1>
-                        <Sprout size={80} id="sprout" />
+                        <Sprout id="sprout" />
                     </div>
 
                     <div id="heroLeftLower">

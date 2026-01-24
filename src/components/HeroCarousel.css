@@ -1,23 +1,16 @@
-html {
-    overflow-x: visible;
+html, body {
+    width: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
-body {
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-}
 
 .heroCarousel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    min-height: 100svh;
-    overflow-x: hidden;
 }
-
-
 
 .ourTeams {
     color: var(--clr-secondary-400);

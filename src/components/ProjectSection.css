@@ -6,6 +6,8 @@
   height: 300px;
   background-image: linear-gradient(to bottom, #c9efcf, var(--clr-primary-300));
   padding: 20px;
+
+  margin-top: 60px;
 }
 
 .projectContainer {

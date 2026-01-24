@@ -7,6 +7,8 @@
   background-image: linear-gradient(to bottom, #c9efcf, var(--clr-primary-300));
   padding: 20px;
   scroll-behavior: smooth;
+
+  margin-top: 60px;
 }
 
 .heroLeft {

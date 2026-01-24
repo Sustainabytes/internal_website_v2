@@ -8,10 +8,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
 
     background-color: var(--clr-primary-300);
     width: 100%;
     padding: 6px clamp(20px, 5vw, 120px);
+    z-index: 50;
 }
 
 .logo, .apply {

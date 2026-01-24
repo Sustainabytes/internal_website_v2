@@ -41,13 +41,29 @@ function HomeBody() {
         </div>
 
         <div className="centerFlex" style={{ gap: "20px" }}>
-          <img src={Grass_1} alt="A doodle of a small leaf" className="grassDoodle"/>
-          <p className="visionStatement">
-            We aim to drive meaningful change and to build a vibrant community
-            of passionate learners through <u>events</u>, hands-on{" "}
-            <u>projects</u>, and <u>advocacy</u>.
-          </p>
-          <img src={Grass_2} alt="A doodle of a small leaf" className="grassDoodle"/>
+          <img
+            src={Grass_1}
+            alt="A doodle of a small leaf"
+            className="grassDoodle"
+          />
+          <div className="centerFlex column" style={{gap: "10px"}}>
+            <h2 style={{color: "var(--clr-neutral-100)", fontSize: "font-size: clamp(1rem, 2vw, 1.5rem)"}}>
+              <em>
+                Cornell's first Computational Sustainability Club (founded 2024)
+              </em>
+            </h2>
+            <p className="visionStatement">
+              We aim to drive meaningful change and to build a vibrant community
+              of passionate learners through <u>events</u>, hands-on{" "}
+              <u>projects</u>, and <u>advocacy</u>.
+            </p>
+          </div>
+
+          <img
+            src={Grass_2}
+            alt="A doodle of a small leaf"
+            className="grassDoodle"
+          />
         </div>
       </div>
 

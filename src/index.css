@@ -13,13 +13,16 @@
   color: var(--clr-primary-600);
 }
 
-body {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
+html, body {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
   overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
 }
 
-.font-sans, h1 {
-  font-family: 'Open Sans', sans-serif;
+.font-sans,
+h1 {
+  font-family: "Open Sans", sans-serif;
 }
 
 .centerFlex {
@@ -30,4 +33,22 @@ body {
 
 .column {
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .group-card {
+    flex-direction: column-reverse !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .group-card {
+    flex-direction: column-reverse !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1280px) {
+  .group-card {
+    flex-direction: column-reverse !important;
+  }
 }

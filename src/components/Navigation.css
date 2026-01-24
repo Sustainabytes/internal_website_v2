@@ -10,7 +10,7 @@ nav {
     justify-content: space-between;
 
     background-color: var(--clr-primary-300);
-    width: 100vw;
+    width: 100%;
     padding: 6px clamp(20px, 5vw, 120px);
 }
 

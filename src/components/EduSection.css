@@ -1,123 +1,110 @@
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-
 .eduHero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-    height: 700px;
-    background-image: linear-gradient(to bottom, #C9EFCF, var(--clr-primary-300));
-    padding: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  height: 700px;
+  background-image: linear-gradient(to bottom, #c9efcf, var(--clr-primary-300));
+  padding: 200px;
+  scroll-behavior: smooth;
 }
 
 .heroLeft {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #sprout {
-    color: var(--clr-primary-400);
+  color: var(--clr-primary-400);
 }
 
 #heroLeftLower {
-    display: flex;
+  display: flex;
 }
 
 #andSign {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 #engagement {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .heroLeft div {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .heroDescriptionBox {
-    background-color: var(--clr-primary-300);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: 30px;
-    padding-right: 30px;
+  background-color: var(--clr-primary-300);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-
 #heroTitle {
-    color: #00AD3D;
-    font-size: 36px;
-    font-style: italic;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-    font-weight: 600;
+  color: #00ad3d;
+  font-size: 36px;
+  font-style: italic;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
 }
 
 #herodesc {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 100;
-    color: var(--clr-secondary-400);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 100;
+  color: var(--clr-secondary-400);
 }
-
 
 .nestArrow {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
-
-
-
-
-
 .pink {
-    color: #EF71E5;
+  color: #ef71e5;
 }
 
 .eduBody {
-    padding-top: 70px;
-    padding-bottom: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 70px;
+  padding-top: 70px;
+  padding-bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
 }
 
 .bodyTitle {
-    font-size: 48px;
-    font-weight: 600;
-    color: #EF71E5;
+  font-size: 48px;
+  font-weight: 600;
+  color: #ef71e5;
 }
 
 .eventCard {
-    background-image: linear-gradient(to bottom, #FCFFF5, var(--clr-primary-300));
-    width: 90%;
-    padding: 40px;
+  background-image: linear-gradient(to bottom, #fcfff5, var(--clr-primary-300));
+  width: 90%;
+  padding: 40px;
 }
 
 .eventTitle {
-    font-size: 48px;
-    font-weight: 100;
-    color: var(--clr-secondary-400)
+  font-size: 48px;
+  font-weight: 100;
+  color: var(--clr-secondary-400);
 }
 
 .eventDate {
-    font-size: 24px;
-    font-weight: 100;
-    color: #7EB3F8;
+  font-size: 24px;
+  font-weight: 100;
+  color: #7eb3f8;
 }
 
 .eventDescription {
-    font-size: 24px;
-    font-weight: 100;
-    color: var(--clr-primary-600);
+  font-size: 24px;
+  font-weight: 100;
+  color: var(--clr-primary-600);
 }

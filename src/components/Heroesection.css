@@ -1,45 +1,93 @@
 .heroesection {
-    position: relative;
-    gap: 20px;
-    height: 790px;
+  position: relative;
+  gap: 20px;
+  min-height: 790px;
+  height: auto;
+}
+
+.description,
+.description-container,
+.teamPhoto img {
+  width: 100%;
+  max-width: 650px;
+}
+
+.description-container {
+  position: relative;
 }
 
 .mascot {
-    position: absolute;
-    top: 12px;
-    right: 300px;
+  position: absolute;
+  top: -160px;
+  right: 40px;
+  width: min(40vw, 400px);
+  pointer-events: none;
 
-    z-index: -1;
+  transform-origin: bottom right;
+  z-index: -1;
 }
 
 .description {
-    max-width: 480px;
+  max-width: 480px;
 }
 
 h2 {
-    color: var(--clr-primary-400);
-    font-size: 24px;
+  color: var(--clr-primary-400);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
 }
 
 h1 {
-    color: var(--clr-primary-500);
-    font-size: 60px;
-    font-weight: 600;
+  color: var(--clr-primary-500);
+  font-size: clamp(2.3rem, 10vw, 3.6rem);
+  font-weight: 600;
 }
 
 h1 span {
-    font-weight: 600;
-    color: var(--clr-secondary-400);
+  font-weight: 600;
+  color: var(--clr-secondary-400);
 }
 
 .description p {
-    color: var(--clr-primary-600);
-    font-size: 20px;
-    font-weight: 600;
+  color: var(--clr-primary-600);
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 600;
 
-    max-width: 465px;
+  max-width: 100%;
 }
 
 .description p span {
-    color: var(--clr-primary-400);
+  color: var(--clr-primary-400);
+}
+
+.teamPhoto img {
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .heroesection {
+    margin-top: min(15vw, 100px);
+    flex-direction: column-reverse;
+  }
+
+  .description {
+    padding: 10px;
+  }
+
+  .mascot {
+    top: max(-30vw, -140px);
+    right: 40px;
+    width: min(70vw, 350px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .heroesection {
+    margin-top: 120px;
+    flex-direction: column-reverse;
+  }
+
+  .mascot {
+    width: 400px;
+  }
 }

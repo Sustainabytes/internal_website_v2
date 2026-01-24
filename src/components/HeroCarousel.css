@@ -1,347 +1,322 @@
-html, body {
-    width: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-
-
 .heroCarousel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
 }
 
 .ourTeams {
-    color: var(--clr-secondary-400);
-    font-weight: 500;
-    font-style: italic;
-    font-size: 60px;
+  color: var(--clr-secondary-400);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 60px;
 }
 
 .ourTeamsTitle {
-    align-self: flex-start;
-    display: flex;
-    gap: 10px;
-    margin-left: 10%;
-    margin-top: 5%;
+  align-self: flex-start;
+  display: flex;
+  gap: 10px;
+  margin-left: 10%;
+  margin-top: 5%;
 }
 
-
 .arrow {
-    padding-top: 20px;;
-    height: 80px;
-    width: auto;
+  padding-top: 20px;
+  height: 80px;
+  width: auto;
 }
 
 .teams {
-    color: var(--clr-primary-500);
+  color: var(--clr-primary-500);
 }
 
 .heroMainBlock {
-    position: relative;
+  position: relative;
 
-    background-color: var(--clr-primary-300);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 11%;
-    padding: 5%;
+  background-color: var(--clr-primary-300);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11%;
+  padding: 5%;
 }
 
 .backArrow {
-    position: absolute;
-    top: 50%;
-    left: 3%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
 }
 
-
 .nextArrow {
-    cursor: pointer;
-    position: absolute;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+  cursor: pointer;
+  position: absolute;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
 }
 
 .heroLeftside {
-    width: 50%;
+  width: 50%;
 }
 
 .flashcard {
-    border-radius: 15px;
-    overflow: hidden;
-    object-position: center;
-    
+  border-radius: 15px;
+  overflow: hidden;
+  object-position: center;
 }
 
 .flashcard img {
-    width: 100%;
-    height: 100%;
-    max-width: none;     
-    max-height: none;
-    margin: 0;          
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
 
-    object-fit: cover;  
-    object-position: center center;
-    display: block;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
 }
 
-
 .heroRightside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40%;
-    aspect-ratio: 10 / 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  aspect-ratio: 10 / 7;
 }
 
 .heroText {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .heroRightside h2 {
-    color: var(--clr-primary-600);
-    font-weight: 600;
-    font-size: 48px;
+  color: var(--clr-primary-600);
+  font-weight: 600;
+  font-size: 48px;
 }
 
 .heroRightside h4 {
-    color: var(--clr-primary-500);
-    font-weight: 300;
-    font-size: 24px;
-    justify-self: flex-start;
+  color: var(--clr-primary-500);
+  font-weight: 300;
+  font-size: 24px;
+  justify-self: flex-start;
 }
 
 .membersBtn {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--clr-neutral-100);
-    align-self: flex-end;
-    border-radius: 15px;
-    border-style: none;
-    background-color: var(--clr-secondary-300);
-    height: 51px;
-    width: 208px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--clr-neutral-100);
+  align-self: flex-end;
+  border-radius: 15px;
+  border-style: none;
+  background-color: var(--clr-secondary-300);
+  height: 51px;
+  width: 208px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
-
 .carlaSection {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-    padding: 5%;
-    padding-left: 10%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 5%;
+  padding-left: 10%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .carlaLeftside {
-    position: relative;
-    width: clamp(260px, 28vw, 380px);
-    aspect-ratio: 1 / 1;
+  position: relative;
+  width: clamp(260px, 28vw, 380px);
+  aspect-ratio: 1 / 1;
 }
 
 .carlaPic {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .carlaVec {
-    position: absolute;
-    inset: 0;
-    width: 140%;
-    height: 140%;
-    transform: translate(-19%, -13%);
-
+  position: absolute;
+  inset: 0;
+  width: 140%;
+  height: 140%;
+  transform: translate(-19%, -13%);
 }
 
-
 .carlaRightside h2 {
-    font-size: 48px;
-    font-weight: 600;
-    color: var(--clr-primary-600);
-    text-align: center;
-    padding-bottom: 30px;
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--clr-primary-600);
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .carlaRightside h4 {
-    font-size: 24px;
-    font-weight: 200;
-    color: var(--clr-secondary-400);
-    text-align: center;
+  font-size: 24px;
+  font-weight: 200;
+  color: var(--clr-secondary-400);
+  text-align: center;
 }
 
 .advisor {
-    color: var(--clr-secondary-400);
+  color: var(--clr-secondary-400);
 }
 
 .theTeams {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: var(--clr-primary-600);
-    gap: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--clr-primary-600);
+  gap: 50px;
 }
 
 .teamSection {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .teamTitle {
-    width: 90%;
-    height: 892x;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    font-size: 60px;
-    font-weight: 600;
+  width: 90%;
+  height: 892x;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 60px;
+  font-weight: 600;
 }
 
 .teamMembers {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    width: 80vw;
-    display: flex;
-    gap: 100px;
-    flex-wrap: wrap;
-    justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 80vw;
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 .memPhoto {
-    position: relative;
-    width: clamp(260px, 30vw, 300px);
-    aspect-ratio: 1 / 1;
+  position: relative;
+  width: clamp(260px, 30vw, 300px);
+  aspect-ratio: 1 / 1;
 }
 
-
 .frame {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  z-index: 2;
 }
 
 .headShot {
-    position: absolute;
-    top: 43%;
-    left: 50%;
-    width: 89%;
-    height: 79%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    border-radius: 10px;
-    z-index: 1;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  width: 89%;
+  height: 79%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: 1;
 }
-
 
 .aboveFrame {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    z-index: 3;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 3;
 }
 
-
 .aboveFrame h3 {
-    white-space: nowrap;
-    position: absolute;
-    top: -6%;
-    left: 15%;
-    transform: none;
-    font-size: clamp(32px, 2vw, 24px);
+  white-space: nowrap;
+  position: absolute;
+  top: -6%;
+  left: 15%;
+  transform: none;
+  font-size: clamp(32px, 2vw, 24px);
 }
 
 .aboveFrame h4 {
-    position: absolute;
-    bottom: 6%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: clamp(24px, 1.6vw, 20px);
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(24px, 1.6vw, 20px);
 }
 
 .aboveFrame > .emailBtn > .emailImg {
-    position: absolute;
-    bottom: 10%;
-    left: 80%;
-    transform: translateX(-50%);
+  position: absolute;
+  bottom: 10%;
+  left: 80%;
+  transform: translateX(-50%);
 }
-
 
 .emailBtn {
-    position: absolute;
-    bottom: 10%;
-    left: 80%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  position: absolute;
+  bottom: 10%;
+  left: 80%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-
 .emailLink {
-    background-color: var(--clr-primary-300);
-    border-radius: 10px;
-    padding: 5px;
-    border-style: solid;
-    position: absolute;
-    top: -35px;
-    left: 40px;
+  background-color: var(--clr-primary-300);
+  border-radius: 10px;
+  padding: 5px;
+  border-style: solid;
+  position: absolute;
+  top: -35px;
+  left: 40px;
 
-    pointer-events: auto;
-    opacity: 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 0.25s ease;
-    z-index: 10;
+  pointer-events: auto;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.25s ease;
+  z-index: 10;
 }
 
 .linkedInImg {
-    position: absolute;
-    top: 50px;
-    left: 0px;
+  position: absolute;
+  top: 50px;
+  left: 0px;
 
-    height: 30px;
-    opacity: 0;
-    transition: all 0.25s ease;
-    z-index: 2;
+  height: 30px;
+  opacity: 0;
+  transition: all 0.25s ease;
+  z-index: 2;
 }
 
 .portfolioImg {
-    position: absolute;
-    top: 50px;
-    left: 35px;
-    height: 30px;
-    opacity: 0;
-    transition: all 0.25s ease;
-    z-index: 3;
+  position: absolute;
+  top: 50px;
+  left: 35px;
+  height: 30px;
+  opacity: 0;
+  transition: all 0.25s ease;
+  z-index: 3;
 }
-
 
 .emailBtn:hover .emailLink,
 .emailBtn:hover .linkedInImg,
-.emailBtn:hover .portfolioImg{
-    opacity: 1;
-    transform: scaleX(1);
+.emailBtn:hover .portfolioImg {
+  opacity: 1;
+  transform: scaleX(1);
 }
-
-
-

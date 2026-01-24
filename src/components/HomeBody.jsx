@@ -41,13 +41,13 @@ function HomeBody() {
         </div>
 
         <div className="centerFlex" style={{ gap: "20px" }}>
-          <img src={Grass_1} alt="A doodle of a small leaf" />
+          <img src={Grass_1} alt="A doodle of a small leaf" className="grassDoodle"/>
           <p className="visionStatement">
             We aim to drive meaningful change and to build a vibrant community
             of passionate learners through <u>events</u>, hands-on{" "}
             <u>projects</u>, and <u>advocacy</u>.
           </p>
-          <img src={Grass_2} alt="A doodle of a small leaf" />
+          <img src={Grass_2} alt="A doodle of a small leaf" className="grassDoodle"/>
         </div>
       </div>
 
@@ -59,11 +59,7 @@ function HomeBody() {
           const Icon = group.icon;
 
           return (
-            <div
-            key={index}
-              className="group-card centerFlex"
-              style={{ flexDirection: index % 2 === 0 ? "row-reverse" : "row" }}
-            >
+            <div key={index} className="group-card centerFlex">
               <div className="group-description" key={index}>
                 <div className="group-header">
                   <Icon

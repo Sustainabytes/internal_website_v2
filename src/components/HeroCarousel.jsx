@@ -253,7 +253,7 @@ function HeroCarousel() {
                     backColor="linear-gradient(90deg, #FBBEF6, #FAF5F9)"
                     textColor="#EF71E5"
                     text="Engagement and Education"
-                    arr={[{ name: "Tristan A.", role: "Member", email: "" },
+                    arr={[{ name: "Tristan A.", role: "Member", email: "tja75@cornell.edu" },
                         { name: "Jimmy Z.", role: "Member", email: "" }
                     ]}
                 />

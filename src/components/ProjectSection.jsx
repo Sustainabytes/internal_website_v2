@@ -25,15 +25,16 @@ function ProjectSection() {
         <h1>Our Projects</h1>
       </div>
       <div className="projectContainer centerFlex column">
-        {projects.map((project, index) => {
-          <div key={index} className="centerFlex projectCard">
-            <div className="image-container"></div>
-            <div className="centerFlex column">
-              <h1>{project.title}</h1>
-              <p>{project.description}</p>
-            </div>
-          </div>;
-        })}
+        {projects.map((project, index) => (
+        <div key={index} className="centerFlex projectCard">
+          <div className="image-container"></div>
+          <div className="centerFlex column">
+            <h1>{project.title}</h1>
+            <p>{project.description}</p>
+          </div>
+        </div>
+      ))}
+
       </div>
     </div>
   );

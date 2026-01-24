@@ -178,7 +178,7 @@ function HeroCarousel() {
         <div className="heroCarousel">
 
             <div className="ourTeamsTitle">
-                <h1 className="ourTeams font-sans">Our <span className="teams">Teams</span></h1>
+                <h1 className="ourTeams font-sans"> Our <span className="teams">Team</span></h1>
                 <img src={Arrow} alt="arrow" className="arrow"/>
             </div>
 
@@ -235,7 +235,7 @@ function HeroCarousel() {
                         { name: "Kaavya P.", role: "Business", email: "kp627@cornell.edu", linkedIn: "https://www.linkedin.com/in/kaavya-paladugu", photo: KaavyaP}, 
                         { name: "Aish M.", role: "External Affairs", email: "am3369@cornell.edu", photo: AishM }, 
                         { name: "RECRUITING", role: "Social Coordinator", email: "Apply today!" }, 
-                        { name: "RECRUITING", role: "Interal Affairs", email: "Apply today!" }
+                        { name: "RECRUITING", role: "Internal Affairs", email: "Apply today!" }
                     ]}
                 />
                 <TeamsSection

@@ -56,11 +56,13 @@ html, body {
     left: 6%;
     transform: translateY(-50%);
     cursor: pointer;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
 }
 
 
 .nextArrow {
     position: absolute;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
 }
 
 .heroLeftside {

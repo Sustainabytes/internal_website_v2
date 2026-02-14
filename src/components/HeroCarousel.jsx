@@ -368,7 +368,7 @@ function HeroCarousel() {
               role: "Lead",
               email: "wc679@cornell.edu",
               linkedIn: "https://www.linkedin.com/in/winnie-chan8/",
-              portfolio: "https://winniec180.github.io/winniechan/",
+              portfolio: "https://winniec180.github.io/",
               photo: "/Members/Winnie.png",
             },
             {

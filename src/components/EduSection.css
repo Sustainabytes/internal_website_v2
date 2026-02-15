@@ -128,6 +128,15 @@
   .heroDescriptionBox {
     width: 80vw;
   }
+
+  .event {
+    flex-direction: column;
+    padding: 0 !important;
+  }
+
+  .event img {
+    padding: 20px 0 !important;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1280px) {

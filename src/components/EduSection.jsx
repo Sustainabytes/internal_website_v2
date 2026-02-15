@@ -25,7 +25,7 @@ function EduBodyEvent({ title, date, desc, img }) {
     <div className="eventCard">
       <h2 className="eventTitle">{title}</h2>
       <h3 className="eventDate">{date}</h3>
-      <div className="centerFlex" style={{ gap: "10px", padding: "20px" }}>
+      <div className="centerFlex event" style={{ gap: "10px", padding: "20px" }}>
         <img
           src={img}
           alt="The image for the event"

@@ -273,9 +273,9 @@ function HeroCarousel() {
               photo: "/Members/AishMarieswaran.png",
             },
             {
-              name: "RECRUITING",
+              name: "Katie Li",
               role: "Social Coordinator",
-              email: "Apply today!",
+              email: "kl2295@cornell.edu",
             },
             {
               name: "RECRUITING",
@@ -392,6 +392,12 @@ function HeroCarousel() {
               linkedIn: "https://www.linkedin.com/in/willowchen29",
               photo: "/Members/WillowChen.jpg",
             },
+            {
+              name: "Sandy Y.",
+              role: "Member",
+              email: "syy6@cornell.edu",
+              photo: "/Members/SandyYang.jpeg",
+            }
           ]}
         />
       </div>

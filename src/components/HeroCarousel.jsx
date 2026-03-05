@@ -324,7 +324,7 @@ function HeroCarousel() {
               role: "Member",
               email: "hv96@cornell.edu",
               linkedIn:
-                "www.linkedin.com/in/hanna-vasquez-a074052b1",
+                "https://www.linkedin.com/in/hanna-vasquez-a074052b1",
             },            {
               name: "Finn E.",
               role: "Member",

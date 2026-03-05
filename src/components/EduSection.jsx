@@ -2,6 +2,7 @@ import "./EduSection.css";
 import { Sprout } from "lucide-react";
 import AndSign from "../assets/andSign.svg";
 import NextArrow from "../assets/NextArrow.svg";
+import Mascot from "../assets/Mascot.svg";
 import { useState } from "react";
 
 function EduHeroText({ title, desc, onNext }) {
@@ -68,34 +69,10 @@ function EduSection() {
 
   const bodyEvents = [
     {
-      title: "Computational Sustainability Career Night",
-      date: "Feb 25, 2026 @ 6 PM - 8 PM",
-      desc: (
-        <>
-          <h2>Panel Speakers</h2>
-          <br />
-          <p>
-            <b>Alumni:</b> Brian Warshay, Phillip Lanza <br />
-            <b>Professors:</b> Andrew Bell, David Shmoys <br />
-            <b>Grad students:</b> Abigail Grassick, Madeleine Allen, Katerina
-            Tang
-          </p>
-          <br />
-          <h2>
-            Campus groups registration{" "}
-            <a
-              href="https://cglink.me/2ee/r2299244"
-              style={{ color: "var(--clr-primary-500)" }}
-            >
-              link
-            </a>
-            !
-          </h2>
-          <br />
-          <h3>There will be free food (pizza)</h3>
-        </>
-      ),
-      eventImage: "/E&Events/ecoCareerNight.png",
+      title: "More Coming Soon!",
+      date: "",
+      desc: (""),
+      eventImage: Mascot,
     },
   ];
 

@@ -319,7 +319,20 @@ function HeroCarousel() {
               linkedIn:
                 "https://www.linkedin.com/in/nhat-minh-tran-ngoc-1b90642a9/",
               photo: "/Members/MinhTran.png",
-            },
+            },            {
+              name: "Hanna V.",
+              role: "Member",
+              email: "hv96@cornell.edu",
+              linkedIn:
+                "www.linkedin.com/in/hanna-vasquez-a074052b1",
+            },            {
+              name: "Finn E.",
+              role: "Member",
+              email: "fce7@cornell.edu",
+              linkedIn:
+                "https://www.linkedin.com/in/finn-ericson-468149349/",
+              photo: "/Members/FinnEricson.JPEG",
+            }
           ]}
         />
         <TeamsSection

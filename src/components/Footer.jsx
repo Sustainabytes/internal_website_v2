@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Github } from "lucide-react";
-import SUSBLogo from "../assets/SUSB_Logo.png";
+import BrandMark from "../assets/SUSB_Logo.svg";
 import "./Footer.css";
 
 const socials = [
@@ -22,9 +22,9 @@ function Footer() {
     <div className="foot">
       <div className="shell">
         <div className="foot__top">
-          <div className="foot__brand">
-            <img src={SUSBLogo} alt="" width="34" height="34" />
-            <span className="foot__wordmark">Sustainabytes</span>
+          <div className="brand foot__brand">
+            <img className="brand__mark" src={BrandMark} alt="" />
+            <span className="brand__word">Sustainabytes</span>
           </div>
 
           <ul className="foot__social">

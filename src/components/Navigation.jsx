@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import NavLogo from "../assets/NavLogo.svg";
+import BrandMark from "../assets/SUSB_Logo.svg";
 import "./Navigation.css";
 
 const APPLY_URL = "https://forms.gle/Xz8tnGbQK4EKTQrQ8";
@@ -19,8 +19,9 @@ function Navigation() {
   return (
     <nav className="nav">
       <div className="nav__inner">
-        <Link to="/" className="nav__logo" onClick={closeMenu}>
-          <img src={NavLogo} alt="Sustainabytes" />
+        <Link to="/" className="brand nav__brand" onClick={closeMenu}>
+          <img className="brand__mark" src={BrandMark} alt="" />
+          <span className="brand__word">Sustainabytes</span>
         </Link>
 
         <button

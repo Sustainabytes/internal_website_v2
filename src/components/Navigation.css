@@ -22,14 +22,10 @@
   padding-inline: var(--gutter);
 }
 
-.nav__logo {
+.nav__brand {
   flex-shrink: 0;
-  line-height: 0;
-}
-
-.nav__logo img {
-  width: 132px;
-  height: auto;
+  --brand-mark: 30px;
+  --brand-size: 1.1875rem;
 }
 
 .nav__panel {

@@ -1,8 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import NavLogo from "../assets/NavLogo.png";
+import NavLogo from "../assets/NavLogo.svg";
 import "./Navigation.css";
+
+const APPLY_URL = "https://forms.gle/Xz8tnGbQK4EKTQrQ8";
 
 function Navigation() {
   const links = [
@@ -12,55 +14,46 @@ function Navigation() {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav>
-      <div className="logo">
-        <Link
-          to="/"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          <img src={NavLogo} alt="The logo of Cornell's Computational club" />
+    <nav className="nav">
+      <div className="nav__inner">
+        <Link to="/" className="nav__logo" onClick={closeMenu}>
+          <img src={NavLogo} alt="Sustainabytes" />
         </Link>
-      </div>
-      <div className="menu-icon" onClick={toggleMenu}>
-        {isOpen ? <X size={28} /> : <Menu size={28} />}
-      </div>
 
-      <div className={`links ${isOpen ? "active" : ""}`}>
-        <ul className="centerFlex">
-          {links.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              className="link"
-              onClick={closeMenu} 
-            >
-              {link.name}
-            </NavLink>
-          ))}
-          <li className="mobile-only">
-            <a
-              href="https://forms.gle/Xz8tnGbQK4EKTQrQ8"
-              target="_blank"
-              className="apply-btn"
-            >
-              Apply!
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div className="apply centerFlex desktop-only">
-        <a
-          href="https://forms.gle/Xz8tnGbQK4EKTQrQ8"
-          target="_blank"
-          style={{ color: "white", textDecoration: "none" }}
+        <button
+          type="button"
+          className="nav__toggle"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          onClick={() => setIsOpen((open) => !open)}
         >
-          <p>Apply!</p>
-        </a>
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+
+        <div className={`nav__panel ${isOpen ? "is-open" : ""}`}>
+          <ul className="nav__links">
+            {links.map((link) => (
+              <li key={link.name}>
+                <NavLink to={link.path} className="nav__link" onClick={closeMenu}>
+                  {link.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={APPLY_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn--solid nav__apply"
+            onClick={closeMenu}
+          >
+            Apply to join
+          </a>
+        </div>
       </div>
     </nav>
   );

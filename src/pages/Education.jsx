@@ -1,19 +1,19 @@
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
-import EduSection from "../components/EduSection"
+import Navigation from "../components/Navigation";
+import EduSection from "../components/EduSection";
+import Footer from "../components/Footer";
 
-function Education () {
-    return (
-        <div>
-            <Navigation />
-            <main>
-                <EduSection />
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </div>
-    )
+function Education() {
+  return (
+    <>
+      <Navigation />
+      <main>
+        <EduSection />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  );
 }
 
-export default Education
+export default Education;

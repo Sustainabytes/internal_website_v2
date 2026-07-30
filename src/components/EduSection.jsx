@@ -1,123 +1,95 @@
 import "./EduSection.css";
-import { Sprout } from "lucide-react";
-import AndSign from "../assets/andSign.svg";
-import NextArrow from "../assets/NextArrow.svg";
-import Mascot from "../assets/Mascot.svg";
-import { useState } from "react";
 
-function EduHeroText({ title, desc, onNext }) {
-  return (
-    <div className="eduHeroText">
-      <h2 id="heroTitle" className="font-sans">
-        {title}
-      </h2>
+/* A real sequence — these are the two aims, in order — so the numerals carry
+   information rather than decorating the list. */
+const aims = [
+  {
+    numeral: "I",
+    title: "Build community",
+    body: "We host interdisciplinary collaborations across the data, tech, and environmental groups on campus through engagement and outreach initiatives.",
+  },
+  {
+    numeral: "II",
+    title: "Professional development",
+    body: "We connect computational sustainability and green tech professionals with like-minded peers through socials, networking events, career panels, and guest speakers.",
+  },
+];
 
-      <div className="heroDescriptionBox">
-        <h4 id="herodesc">{desc}</h4>
-
-        <img src={NextArrow} className="nestArrow" onClick={onNext} />
-      </div>
-    </div>
-  );
-}
-
-function EduBodyEvent({ title, date, desc, img }) {
-  return (
-    <div className="eventCard">
-      <h2 className="eventTitle">{title}</h2>
-      <h3 className="eventDate">{date}</h3>
-      <div className="centerFlex event" style={{ gap: "10px", padding: "20px" }}>
-        <img
-          src={img}
-          alt="The image for the event"
-          style={{ maxWidth: "50vw", padding: "20px" }}
-        />
-        <div>{desc}</div>
-      </div>
-    </div>
-  );
-}
+const events = [];
 
 function EduSection() {
-  const heroTexts = [
-    {
-      title: "I. Build Community",
-      desc: (
-        <>
-          We aim to foster and host{" "}
-          <span className="pink">interdisciplinary</span> collaborations across
-          data, tech, and environment and sustainability groups on campus
-          through <span className="pink">engagement</span> and{" "}
-          <span className="pink">outreach initiatives</span> (podcast, etc.).
-        </>
-      ),
-    },
-    {
-      title: "II. Professional Development",
-      desc: (
-        <>
-          We strive to connect computational sustainability/green tech
-          professionals and like-minded peers through{" "}
-          <span className="pink">socials</span>,{" "}
-          <span className="pink">networking events</span>,{" "}
-          <span className="pink">career panels</span>, and{" "}
-          <span className="pink">guest speakers</span>.
-        </>
-      ),
-    },
-  ];
-
-  const bodyEvents = [
-    {
-      title: "More Coming Soon!",
-      date: "",
-      desc: (""),
-      eventImage: Mascot,
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % heroTexts.length);
-  };
-
   return (
-    <>
-      <div className="eduHero">
-        <div className="heroLeft">
-          <div id="heroLeftUpper">
-            <h1>Education</h1>
-            <Sprout id="sprout" />
-          </div>
-
-          <div id="heroLeftLower">
-            <img src={AndSign} id="andSign" />
-            <h1 id="engagement">Engagement</h1>
-          </div>
+    <div className="edu">
+      <header className="edu__head">
+        <div className="shell">
+          <span className="eyebrow">Education &amp; Engagement</span>
+          <h1 className="edu__title">
+            Learning in
+            <br />
+            public.
+          </h1>
+          <p className="edu__intro measure">
+            We build the events, workshops, and resources that make computational
+            sustainability legible to the rest of campus.
+          </p>
         </div>
+      </header>
 
-        <EduHeroText
-          title={heroTexts[currentIndex].title}
-          desc={heroTexts[currentIndex].desc}
-          onNext={handleNext}
-        />
-      </div>
+      <section className="aims">
+        <div className="shell">
+          <span className="eyebrow">Our aims</span>
+          <ol className="aims__list">
+            {aims.map((aim) => (
+              <li key={aim.numeral} className="aim">
+                <span className="aim__numeral mono">{aim.numeral}</span>
+                <div className="aim__text">
+                  <h2 className="aim__title">{aim.title}</h2>
+                  <p className="aim__body measure">{aim.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
-      <div className="eduBody">
-        <h2 className="bodyTitle font-sans">Upcoming Events</h2>
+      <section className="events">
+        <div className="shell">
+          <span className="eyebrow eyebrow--rule">Upcoming events</span>
 
-        {bodyEvents.map((event, index) => (
-          <EduBodyEvent
-            key={index}
-            title={event.title}
-            date={event.date}
-            desc={event.desc}
-            img={event.eventImage}
-          />
-        ))}
-      </div>
-    </>
+          {events.length > 0 ? (
+            <ul className="events__list">
+              {events.map((event) => (
+                <li key={event.title} className="event">
+                  <span className="event__date mono">{event.date}</span>
+                  <div>
+                    <h3 className="event__title">{event.title}</h3>
+                    <p className="event__desc measure">{event.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="events__empty">
+              <p className="events__empty-lead">
+                Nothing on the calendar right now.
+              </p>
+              <p className="events__empty-body measure">
+                We run socials, career panels, and guest speakers through the
+                semester. Follow us on Instagram to hear about the next one first.
+              </p>
+              <a
+                href="https://www.instagram.com/cusustainabytes/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn--quiet"
+              >
+                Follow @cusustainabytes
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
+    </div>
   );
 }
 

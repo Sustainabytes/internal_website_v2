@@ -1,129 +1,79 @@
 import { Link } from "react-router-dom";
-import Msg from "../assets/Msg.svg";
-import EcoFest from "../assets/ecoFest.svg";
+import { ArrowRight } from "lucide-react";
+import EcoFest from "../assets/ecofest.jpg";
 import TechnicalTeams from "../assets/TechnicalTeams.png";
-import Grass_1 from "../assets/grass_1.svg";
-import Grass_2 from "../assets/grass_2.svg";
-import { Rocket, BookCopy } from "lucide-react";
 import "./HomeBody.css";
 
-function HomeBody() {
-  const groups = [
-    {
-      icon: Rocket,
-      name: "Technical Teams",
-      title: "Upskill Through Service",
-      description:
-        "Through Working Groups, we apply data analytics and software engineering to real-world sustainability and serve the local area.",
-      tags: ["Data Analytics", "Web Dev", "Community Impact"],
-      path: "/team",
-      button: "Learn More",
-      photo: TechnicalTeams,
-    },
-    {
-      icon: BookCopy,
-      name: "Education & Engagement",
-      title: "Professional Development",
-      description:
-        "Participate in socials, networking events, career panels, and guest speakers. We aim to cultivate a computational sustainability community at Cornell and beyond. ",
-      tags: ["Network", "Career Development", "Guest Speakers"],
-      path: "/education",
-      button: "Event Timeline",
-      photo: EcoFest,
-    },
-  ];
+const groups = [
+  {
+    label: "Technical Teams",
+    title: "Upskill through service",
+    description:
+      "Through Working Groups, we apply data analytics and software engineering to real-world sustainability work and serve the local area.",
+    tags: ["Data Analytics", "Web Dev", "Community Impact"],
+    path: "/team",
+    action: "Meet the teams",
+    photo: TechnicalTeams,
+    alt: "Members of a Sustainabytes technical team working together.",
+  },
+  {
+    label: "Education & Engagement",
+    title: "Professional development",
+    description:
+      "Socials, networking events, career panels, and guest speakers. We cultivate a computational sustainability community at Cornell and beyond.",
+    tags: ["Network", "Career Development", "Guest Speakers"],
+    path: "/education",
+    action: "See the event timeline",
+    photo: EcoFest,
+    alt: "Sustainabytes members hosting a table at EcoFest.",
+  },
+];
 
+function HomeBody() {
   return (
     <>
-      <div className="ourVision centerFlex column">
-        <div className="centerFlex" style={{ gap: "30px" }}>
-          <h1>
-            <em>Our Vision</em>
-          </h1>
-          <img src={Msg} alt="A message bubble image" />
+      <section className="vision">
+        <div className="shell vision__inner">
+          <span className="eyebrow vision__eyebrow">Our vision</span>
+          <h2 className="vision__statement">
+            Cornell&rsquo;s first Computational Sustainability Club, driving
+            meaningful change through events, hands-on projects, and advocacy.
+          </h2>
         </div>
+      </section>
 
-        <div className="centerFlex" style={{ gap: "20px" }}>
-          <img
-            src={Grass_1}
-            alt="A doodle of a small leaf"
-            className="grassDoodle"
-          />
-          <div className="centerFlex column" style={{ gap: "10px" }}>
-            <h2
-              style={{
-                color: "var(--clr-neutral-100)",
-                fontSize: "font-size: clamp(1rem, 2vw, 1.5rem)",
-              }}
-            >
-              <em>
-                Cornell's first Computational Sustainability Club (founded 2024)
-              </em>
-            </h2>
-            <p className="visionStatement">
-              We aim to drive meaningful change and to build a vibrant community
-              of passionate learners through <u>events</u>, hands-on{" "}
-              <u>projects</u>, and <u>advocacy</u>.
-            </p>
-          </div>
+      <section className="groups">
+        <div className="shell">
+          {groups.map((group) => (
+            <article key={group.label} className="group">
+              <div className="group__text">
+                <span className="eyebrow eyebrow--rule">{group.label}</span>
+                <h2 className="group__title">{group.title}</h2>
+                <p className="group__desc">{group.description}</p>
 
-          <img
-            src={Grass_2}
-            alt="A doodle of a small leaf"
-            className="grassDoodle"
-          />
-        </div>
-      </div>
-
-      <div
-        className="groups centerFlex column"
-        style={{ padding: "100px 0", gap: "170px" }}
-      >
-        {groups.map((group, index) => {
-          const Icon = group.icon;
-
-          return (
-            <div key={index} className="group-card centerFlex">
-              <div className="group-description" key={index}>
-                <div className="group-header">
-                  <Icon
-                    size={40}
-                    style={{
-                      backgroundColor: "var(--clr-secondary-400)",
-                      color: "white",
-                      padding: "8px",
-                      borderRadius: "10px",
-                    }}
-                  />
-                  <h3
-                    style={{
-                      fontSize: "24px",
-                      color: "var(--clr-secondary-400)",
-                    }}
-                  >
-                    {group.name}
-                  </h3>
-                </div>
-                <h1
-                  style={{ fontSize: "40px", color: "var(--clr-primary-800)" }}
-                >
-                  {group.title}
-                </h1>
-                <p style={{ maxWidth: "520px" }}>{group.description}</p>
-                <div className="tags">
+                <ul className="group__tags">
                   {group.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
+                    <li key={tag} className="mono">
+                      {tag}
+                    </li>
                   ))}
-                </div>
-                <Link to={group.path} style={{ textDecoration: "none" }}>
-                  <div className="group-button centerFlex">{group.button}</div>
+                </ul>
+
+                <Link to={group.path} className="btn btn--quiet group__action">
+                  {group.action}
+                  <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
                 </Link>
               </div>
-              <img src={group.photo} alt="" className="groupPhoto" />
-            </div>
-          );
-        })}
-      </div>
+
+              <div className="group__figure specimen">
+                <div className="specimen__mount">
+                  <img src={group.photo} alt={group.alt} />
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </>
   );
 }

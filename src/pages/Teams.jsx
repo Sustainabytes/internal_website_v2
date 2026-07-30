@@ -1,19 +1,19 @@
-import HeroCarousel from "../components/HeroCarousel"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+import Navigation from "../components/Navigation";
+import TeamsDirectory from "../components/TeamsDirectory";
+import Footer from "../components/Footer";
 
-function Teams () {
-    return (
-        <div>
-            <Navigation />
-            <main>
-                <HeroCarousel/>
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </div>
-    )
+function Teams() {
+  return (
+    <>
+      <Navigation />
+      <main>
+        <TeamsDirectory />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  );
 }
 
-export default Teams
+export default Teams;

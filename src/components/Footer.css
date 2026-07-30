@@ -1,75 +1,114 @@
-.footer {
-    min-height: 310px;
-    width: 100%;
-    background-color: var(--clr-primary-300);
-
-    gap: 60px;
+.foot {
+  padding-block: var(--sp-8) var(--sp-6);
+  background-color: var(--paper);
+  border-top: 1px solid var(--rule);
 }
 
-.footer-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 85%;
+.foot__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
 }
 
-.footer-header h1 {
-    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-    font-weight: 700;
-    color: var(--clr-primary-400);
+.foot__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
 }
 
-.footer-header a {
-    color: var(--clr-secondary-400);
+.foot__wordmark {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  font-size: 1.375rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
-.section1 {
-    width: 100vw;
-    gap: 15px;
+.foot__social {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.mission {
-    max-width: 770px;
-    font-size: clamp(0.875rem, 1.2vw, 1.125rem);
-
-    text-align: center;
+.foot__social a {
+  display: inline-flex;
+  color: var(--ink-soft);
 }
 
-.mission u {
-    color: var(--clr-secondary-400);
+.foot__social a:hover {
+  color: var(--moss);
 }
 
-.cornellStatement, .section2 p, .cornellStatement a, .section2  {
-    gap: 10px;
-
-    font-family: 'Open Sans', sans-serif;
-    font-size: clamp(0.688rem, 1vw, 0.875rem);
-    font-weight: 100;
-    color: var(--clr-primary-600);
+.foot__divider {
+  margin-block: var(--sp-3);
 }
 
-@media (max-width: 768px) {
-    .footer {
-        padding: 30px;
-    }
+.foot__body {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--sp-6);
+  flex-wrap: wrap;
+}
 
-    .footer-header {
-        flex-direction: column;
-        gap: 25px;
-    }
+.foot__mission {
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
 
-    .footer-header > div:first-child {
-        display: none;
-    }
+.foot__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  flex-shrink: 0;
+}
 
-    .footer-header > div {
-        flex: none !important;
-        justify-content: center !important;
-    }
+.foot__nav a {
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
 
-    .cornellStatement {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
+.foot__nav a:hover {
+  text-decoration: underline;
+}
+
+.foot__legal {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1) var(--sp-3);
+  flex-wrap: wrap;
+
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-2);
+  border-top: 1px solid var(--rule);
+
+  color: var(--ink-soft);
+  font-size: var(--label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.foot__legal a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+}
+
+.foot__legal a:hover {
+  color: var(--moss);
+}
+
+@media (max-width: 640px) {
+  .foot__body {
+    gap: var(--sp-4);
+  }
+
+  .foot__nav {
+    flex-direction: row;
+    gap: var(--sp-3);
+  }
 }

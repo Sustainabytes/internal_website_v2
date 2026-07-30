@@ -1,0 +1,320 @@
+/* --- Page head ----------------------------------------------------------- */
+
+.teamsPage__head {
+  padding-top: calc(var(--nav-h) + clamp(3rem, 7vw, 5.5rem));
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.teamsPage__title {
+  margin-top: var(--sp-2);
+  font-size: var(--display-xl);
+}
+
+.teamsPage__intro {
+  margin-top: var(--sp-3);
+  font-size: var(--lead);
+  color: var(--ink-soft);
+}
+
+/* --- Team index ---------------------------------------------------------- */
+
+.index {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  background-color: var(--sage-wash);
+  border-block: 1px solid var(--rule);
+}
+
+.index__list {
+  margin: var(--sp-2) 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+
+.index__row {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto 1.5rem;
+  align-items: center;
+  gap: var(--sp-2);
+
+  width: 100%;
+  padding: var(--sp-2) 0;
+
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  cursor: pointer;
+  text-align: left;
+  color: var(--ink);
+  transition: color 0.18s ease;
+}
+
+.index__row:hover {
+  color: var(--moss);
+}
+
+.index__numeral {
+  color: var(--moss);
+  font-size: var(--label);
+  letter-spacing: 0.14em;
+}
+
+.index__name {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  letter-spacing: -0.01em;
+}
+
+.index__count {
+  color: var(--ink-soft);
+  font-size: var(--label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.index__arrow {
+  justify-self: end;
+  color: var(--sage);
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.index__row:hover .index__arrow {
+  transform: translateX(3px);
+  color: var(--moss);
+}
+
+/* --- Advisor ------------------------------------------------------------- */
+/* Carries more vertical air than the list sections below it. */
+
+.advisor {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.advisor__inner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.advisor__figure {
+  grid-row: 1;
+  grid-column: 1 / span 4;
+}
+
+.advisor__text {
+  grid-row: 1;
+  grid-column: 6 / span 6;
+}
+
+.advisor__figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.advisor__name {
+  margin-top: var(--sp-2);
+  font-size: var(--display-l);
+}
+
+.advisor__title {
+  margin-top: var(--sp-2);
+  font-size: var(--lead);
+  color: var(--moss);
+}
+
+.advisor__affiliation {
+  margin-top: var(--sp-1);
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--label);
+}
+
+/* --- Roster -------------------------------------------------------------- */
+
+.team {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.team + .team {
+  border-top: 1px solid var(--rule);
+}
+
+.team__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+
+  padding-bottom: var(--sp-3);
+}
+
+.team__name {
+  margin-right: auto;
+}
+
+.team__count {
+  color: var(--ink-soft);
+  font-size: var(--label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.team__members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: var(--sp-3);
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --- Member specimen card ------------------------------------------------ */
+
+.member {
+  display: flex;
+  flex-direction: column;
+}
+
+.member__mount {
+  background-color: var(--sage-wash);
+}
+
+.member__mount img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.member__label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.member__role {
+  color: var(--moss);
+}
+
+.member__name {
+  font-size: 1.0625rem;
+}
+
+.member__contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-1);
+  margin-top: auto;
+  padding-top: var(--sp-1);
+}
+
+.member__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-width: 0;
+
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--ink-soft);
+  text-align: left;
+}
+
+.member__email span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member__email:hover {
+  color: var(--moss);
+}
+
+.member__links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.member__links a {
+  display: inline-flex;
+  color: var(--ink-soft);
+}
+
+.member__links a:hover {
+  color: var(--moss);
+}
+
+.member__contact--plain {
+  color: var(--ink-soft);
+  font-size: 0.6875rem;
+}
+
+/* Open position — reads as an invitation, not a missing person. */
+.member--open {
+  border-style: dashed;
+  border-color: var(--sage);
+  background-color: transparent;
+}
+
+.member--open .member__mount {
+  opacity: 0.45;
+}
+
+.member--open .member__name {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  color: var(--moss);
+}
+
+@media (max-width: 960px) {
+  .advisor__figure,
+  .advisor__text {
+    grid-column: 1 / -1;
+  }
+
+  .advisor__figure {
+    grid-row: 1;
+    max-width: 260px;
+  }
+
+  .advisor__text {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .index__row {
+    grid-template-columns: 2rem 1fr auto;
+  }
+
+  .index__arrow {
+    display: none;
+  }
+
+  /* Two columns on phones — 15 single-column cards is too long a scroll. */
+  .team__members {
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    gap: var(--sp-2);
+  }
+
+  .member__email {
+    font-size: 0.625rem;
+  }
+}

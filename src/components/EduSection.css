@@ -1,147 +1,127 @@
-.eduHero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10%;
-  height: 700px;
-  background-image: linear-gradient(to bottom, #c9efcf, var(--clr-primary-300));
-  padding: 20px;
-  scroll-behavior: smooth;
-
-  margin-top: 60px;
+.edu__head {
+  padding-top: calc(var(--nav-h) + clamp(3rem, 7vw, 5.5rem));
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
-.heroLeft {
-  display: flex;
-  flex-direction: column;
+.edu__title {
+  margin-top: var(--sp-2);
+  font-size: var(--display-xl);
 }
 
-#sprout {
-  width: clamp(40px, 8vw, 80px);
-  height: auto;
-  color: var(--clr-primary-400);
+.edu__intro {
+  margin-top: var(--sp-3);
+  font-size: var(--lead);
+  color: var(--ink-soft);
 }
 
-#heroLeftLower {
-  display: flex;
+/* --- Aims ---------------------------------------------------------------- */
+
+.aims {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  background-color: var(--sage-wash);
+  border-block: 1px solid var(--rule);
 }
 
-#andSign {
-  width: clamp(60px, 10vw, 100px);
-  height: auto;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.aims__list {
+  margin: var(--sp-3) 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-#engagement {
-  align-self: flex-end;
+.aim {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--sp-2);
+  padding-block: var(--sp-3);
 }
 
-.heroLeft div {
-  display: flex;
-  gap: 10px;
+.aim + .aim {
+  border-top: 1px solid var(--rule);
 }
 
-.heroDescriptionBox {
-  background-color: var(--clr-primary-300);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding-top: 80px;
-  padding-bottom: 80px;
-  padding-left: 30px;
-  padding-right: 30px;
-
-  width: 60vw;
-  max-width: 700px;
+.aim__numeral {
+  padding-top: 0.4rem;
+  color: var(--moss);
+  font-size: var(--label);
+  letter-spacing: 0.14em;
 }
 
-#heroTitle {
-  color: #00ad3d;
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  font-style: italic;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-  font-weight: 600;
+.aim__title {
+  font-size: var(--display-s);
 }
 
-#herodesc {
-  text-align: center;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-weight: 100;
-  color: var(--clr-secondary-400);
+.aim__body {
+  margin-top: var(--sp-1);
+  color: var(--ink-soft);
 }
 
-.nestArrow {
-  width: clamp(20px, 8vw, 50px);
-  padding-left: 10px;
+/* --- Events -------------------------------------------------------------- */
+
+.events {
+  padding-block: var(--section-y);
 }
 
-.pink {
-  color: #ef71e5;
+.events__list {
+  margin: var(--sp-3) 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.eduBody {
-  padding-top: 70px;
-  padding-bottom: 160px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 70px;
+.event {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: var(--sp-2);
+  padding-block: var(--sp-3);
+  border-bottom: 1px solid var(--rule);
 }
 
-.bodyTitle {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 600;
-  color: #ef71e5;
+.event__date {
+  padding-top: 0.3rem;
+  color: var(--moss);
+  font-size: var(--label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.eventCard {
-  background-image: linear-gradient(to bottom, #fcfff5, var(--clr-primary-300));
-  width: 90%;
-  padding: 40px;
+.event__desc {
+  margin-top: var(--sp-1);
+  color: var(--ink-soft);
 }
 
-.eventTitle {
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: 100;
-  color: var(--clr-secondary-400);
+/* An empty calendar is an invitation to act, not a placeholder. */
+.events__empty {
+  margin-top: var(--sp-3);
 }
 
-.eventDate {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-weight: 100;
-  color: #7eb3f8;
+.events__empty-lead {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  font-size: var(--display-s);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
-.eventDescription {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-weight: 100;
-  color: var(--clr-primary-600);
+.events__empty-body {
+  margin-top: var(--sp-2);
+  color: var(--ink-soft);
 }
 
-@media (max-width: 768px) {
-  .eduHero {
-    flex-direction: column;
-    gap: 40px;
-  }
+.events__empty .btn {
+  margin-top: var(--sp-3);
+}
 
-  .heroDescriptionBox {
-    width: 80vw;
+@media (max-width: 640px) {
+  .aim,
+  .event {
+    grid-template-columns: 2rem 1fr;
   }
 
   .event {
-    flex-direction: column;
-    padding: 0 !important;
+    grid-template-columns: 1fr;
+    gap: var(--sp-1);
   }
 
-  .event img {
-    padding: 20px 0 !important;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1280px) {
-  .eduHero {
-    flex-direction: column;
-    gap: 40px;
+  .event__date {
+    padding-top: 0;
   }
 }

@@ -1,21 +1,21 @@
-import Navigation from "../components/Navigation"
-import Heroesection from "../components/Heroesection"
-import HomeBody from "../components/HomeBody"
-import Footer from "../components/Footer"
+import Navigation from "../components/Navigation";
+import Heroesection from "../components/Heroesection";
+import HomeBody from "../components/HomeBody";
+import Footer from "../components/Footer";
 
-function Home () {
-    return (
-        <div>
-            <Navigation />
-            <main>
-                <Heroesection />
-                <HomeBody />
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </div>
-    )
+function Home() {
+  return (
+    <>
+      <Navigation />
+      <main>
+        <Heroesection />
+        <HomeBody />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  );
 }
 
-export default Home
+export default Home;

@@ -1,54 +1,317 @@
+/* ==========================================================================
+   Sustainabytes design system
+   Palette is green-forward and inherited from the club's original brand
+   tokens, deepened until every text pairing clears WCAG AA.
+   ========================================================================== */
+
 :root {
-  --clr-primary-600: hsl(113, 14%, 23%);
-  --clr-primary-500: hsl(141, 21%, 43%);
-  --clr-primary-400: hsl(143, 29%, 67%);
-  --clr-primary-300: hsl(76, 41%, 95%);
+  /* Color */
+  --ink: #1e2a21; /* all body text and headings   13.9:1 on paper */
+  --ink-soft: #4a5b4f; /* secondary text                6.6:1 on paper */
+  --moss: #2f5d45; /* primary green, buttons, links 7.1:1 on paper */
+  --moss-deep: #23472f; /* button hover                              */
+  --sage: #9bc7ac; /* tints and rings only, never text          */
+  --sage-wash: #e4efe6; /* quiet fills                               */
+  --paper: #f5f8ee; /* page ground, hue 76deg                    */
+  --bloom: #a8336f; /* single accent, sparing         5.8:1 on paper */
+  --rule: #d8e2cb; /* hairlines and card borders                 */
+  --surface: #ffffff; /* card mounts                               */
 
-  --clr-secondary-400: hsl(141, 43%, 52%);
-  --clr-secondary-300: hsl(305, 88%, 86%);
+  /* Type */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 
-  --clr-neutral-100: hsl(0, 0%, 100%);
+  --display-xl: clamp(2.75rem, 6vw, 4.5rem);
+  --display-l: clamp(2.25rem, 5vw, 3.5rem);
+  --display-m: clamp(1.75rem, 3vw, 2.5rem);
+  --display-s: clamp(1.375rem, 2vw, 1.75rem);
+  --title: 1.375rem;
+  --lead: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  --body: 1rem;
+  --data: 0.8125rem;
+  --label: 0.6875rem;
 
-  background-color: var(--clr-neutral-100);
-  color: var(--clr-primary-600);
+  /* Space — 8px base */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-6: 3rem;
+  --sp-8: 4rem;
+  --sp-12: 6rem;
+  --sp-16: 8rem;
+
+  --section-y: clamp(4rem, 9vw, 8rem);
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --measure: 68ch;
+  --nav-h: 60px;
+
+  /* Radius — deliberately not one value everywhere */
+  --r-card: 10px;
+  --r-control: 4px;
 }
 
-html, body {
-  font-family: "JetBrains Mono", ui-monospace, monospace;
-  overflow-x: hidden;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
   max-width: 100%;
+  overflow-x: hidden;
+
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Headings ------------------------------------------------------------ */
+/* h1/h2 carry the display face; h3/h4 are UI titles and stay in the sans.  */
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: var(--display-l);
+}
+h2 {
+  font-size: var(--display-m);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+h3 {
+  font-size: var(--title);
+}
+h4 {
+  font-size: 1.0625rem;
+}
+
+p {
   margin: 0;
 }
 
-.font-sans,
-h1 {
-  font-family: "Open Sans", sans-serif;
+/* --- Layout primitives --------------------------------------------------- */
+
+.shell {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
-.centerFlex {
-  display: flex;
-  justify-content: center;
+.measure {
+  max-width: var(--measure);
+}
+
+.stack > * + * {
+  margin-top: var(--sp-2);
+}
+
+/* --- Eyebrow label ------------------------------------------------------- */
+/* Mono, letterspaced, used to introduce sections instead of an icon chip.   */
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+
+.eyebrow--rule {
+  padding-bottom: var(--sp-1);
+  border-bottom: 1px solid var(--rule);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--data);
+  letter-spacing: 0.01em;
+}
+
+/* --- Specimen card ------------------------------------------------------- */
+/* The signature: a herbarium mount. Reserved for things that are records —  */
+/* members, projects, the advisor. Not a general-purpose container.          */
+
+.specimen {
+  background-color: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-card);
+  padding: var(--sp-1);
+}
+
+.specimen__mount {
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--r-card) - 4px);
+  overflow: hidden;
+}
+
+.specimen__label {
+  padding: var(--sp-2) var(--sp-2) var(--sp-1);
+}
+
+/* --- Buttons and links --------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
   align-items: center;
+  gap: var(--sp-1);
+
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+
+  padding: 0.8125rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--r-control);
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
 }
 
-.column {
-  flex-direction: column;
+.btn--solid {
+  background-color: var(--moss);
+  color: var(--surface);
 }
 
-@media (max-width: 768px) {
-  .group-card {
-    flex-direction: column-reverse !important;
+.btn--solid:hover {
+  background-color: var(--moss-deep);
+}
+
+.btn--quiet {
+  background-color: transparent;
+  border-color: var(--rule);
+  color: var(--moss);
+}
+
+.btn--quiet:hover {
+  border-color: var(--moss);
+}
+
+.btn--text {
+  padding: 0.8125rem 0;
+  background: none;
+  color: var(--moss);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.btn--text:hover {
+  color: var(--bloom);
+}
+
+a {
+  color: var(--moss);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--bloom);
+}
+
+/* --- Rules --------------------------------------------------------------- */
+
+.rule {
+  height: 1px;
+  border: 0;
+  margin: 0;
+  background-color: var(--rule);
+}
+
+/* --- Icon button (carousel controls) ------------------------------------- */
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  background-color: var(--surface);
+  color: var(--moss);
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.icon-btn:hover {
+  border-color: var(--moss);
+  color: var(--moss-deep);
+}
+
+/* --- Quality floor ------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--bloom);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+[id] {
+  scroll-margin-top: calc(var(--nav-h) + var(--sp-4));
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-}
 
-@media (min-width: 768px) and (max-width: 900px) {
-  .group-card {
-    flex-direction: column-reverse !important;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1280px) {
-  .group-card {
-    flex-direction: column-reverse !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

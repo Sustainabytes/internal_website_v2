@@ -1,157 +1,143 @@
-.ourVision {
+/* --- Vision band --------------------------------------------------------- */
+/* Tighter vertical rhythm than the sections around it, so the page has
+   cadence rather than a uniform stack. */
+
+.vision {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  background-color: var(--sage-wash);
+  border-block: 1px solid var(--rule);
+}
+
+.vision__inner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--sp-2) clamp(2rem, 4vw, 3.5rem);
+}
+
+.vision__eyebrow {
+  grid-column: 1 / span 3;
+  padding-top: 0.6rem;
+}
+
+.vision__statement {
+  grid-column: 4 / span 8;
+  font-size: var(--display-s);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  color: var(--moss);
+}
+
+/* --- Group cards --------------------------------------------------------- */
+
+.groups {
+  padding-block: var(--section-y);
+}
+
+.group {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.group + .group {
+  margin-top: clamp(4rem, 9vw, 7.5rem);
+}
+
+/* Both children are pinned to row 1 explicitly. Without this, the even card's
+   figure asks for columns that sit before its text and auto-placement drops it
+   to a second row instead of backtracking. */
+.group__text,
+.group__figure {
+  grid-row: 1;
+}
+
+/* First card: text on five columns, figure on six. */
+.group:nth-child(odd) .group__text {
+  grid-column: 1 / span 5;
+}
+
+.group:nth-child(odd) .group__figure {
+  grid-column: 7 / span 6;
+}
+
+/* Second card: figure leads on six columns and the text is indented to
+   column 8 but stops short of the edge — an offset, not a mirror. */
+.group:nth-child(even) .group__figure {
+  grid-column: 1 / span 6;
+}
+
+.group:nth-child(even) .group__text {
+  grid-column: 8 / span 5;
+}
+
+.group__title {
+  margin-top: var(--sp-2);
+}
+
+.group__desc {
+  margin-top: var(--sp-2);
+  color: var(--ink-soft);
+}
+
+.group__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1);
+  margin: var(--sp-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.group__tags li {
+  padding: 0.3125rem 0.625rem;
+  color: var(--moss);
+  background-color: var(--sage-wash);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-control);
+  font-size: var(--label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.group__action {
+  margin-top: var(--sp-3);
+}
+
+.group__figure img {
   width: 100%;
-  min-height: 380px;
   height: auto;
-  gap: 20px;
-
-  background-color: var(--clr-primary-400);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
-.ourVision h1 {
-  color: var(--clr-neutral-100);
-  font-weight: 700;
-}
-
-.visionStatement {
-  max-width: 770px;
-
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.visionStatement u {
-  color: var(--clr-primary-300);
-}
-
-/* group cards */
-
-.group-card {
-  display: flex;
-  flex-direction: row; /* Default */
-  align-items: center;
-  justify-content: center;
-  max-width: 1310px;
-  padding: 20px;
-  gap: 30px;
-  margin: 0 auto;
-
-  background-color: hsl(from var(--clr-primary-400) h s l / 0.2);
-  border: 2px solid var(--clr-secondary-400);
-  border-radius: 20px;
-}
-
-.group-card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.group-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.group-description {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.group-description h3 {
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem) !important;
-}
-
-.group-description h1 {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem) !important;
-  margin: 5px 0;
-}
-
-.group-description p {
-  font-size: clamp(1rem, 1.1vw, 1.25rem) !important;
-  max-width: 520px;
-}
-
-.tags {
-  display: flex;
-  gap: 20px;
-}
-
-.tags span {
-  background-color: var(--clr-primary-400);
-  color: var(--clr-neutral-100);
-  padding: 8px;
-
-  border-radius: 10px;
-}
-
-.group-button {
-  background-color: var(--clr-secondary-300);
-  color: var(--clr-neutral-100);
-
-  max-width: 210px;
-  padding: 10px 0;
-  border-radius: 15px;
-
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.groupPhoto {
-  max-width: 600px;
-  border-radius: 50px;
-}
-
-.community {
-  height: 884px;
-}
-
-@media (max-width: 1150px) {
-  .groups {
-    gap: 60px !important;
-    padding: 60px 20px !important;
+@media (max-width: 960px) {
+  .vision__eyebrow,
+  .vision__statement {
+    grid-column: 1 / -1;
   }
 
-  .group-card,
-  .group-card:nth-child(even) {
-    flex-direction: column-reverse;
-    gap: 30px;
-    padding: 30px 20px;
-    text-align: center;
-    max-width: 550px;
-    width: 95%;
-    margin: 0 auto;
+  .vision__eyebrow {
+    padding-top: 0;
   }
 
-  .group-description {
-    align-items: center;
+  .group {
+    gap: var(--sp-3);
   }
 
-  .group-description p {
-    max-width: 100%;
+  /* Photo first on narrow screens, for both cards. */
+  .group:nth-child(odd) .group__text,
+  .group:nth-child(even) .group__text,
+  .group:nth-child(odd) .group__figure,
+  .group:nth-child(even) .group__figure {
+    grid-column: 1 / -1;
   }
 
-  .groupPhoto {
-    width: 100%;
-    max-width: 480px;
-    height: auto;
-    border-radius: 10px;
+  .group__figure {
+    grid-row: 1;
   }
 
-  .tags {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .ourVision {
-    min-height: auto;
-    padding: 60px 20px;
-  }
-
-  .grassDoodle {
-    display: none;
-  }
-
-  .group-button {
-    padding: 10px;
+  .group__text {
+    grid-row: 2;
   }
 }

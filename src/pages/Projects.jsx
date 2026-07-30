@@ -1,17 +1,19 @@
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
-import ProjectSection from "../components/ProjectSection"
+import Navigation from "../components/Navigation";
+import ProjectSection from "../components/ProjectSection";
+import Footer from "../components/Footer";
 
-function Projects () {
-    return (
-        <div>
-            <Navigation />
-            <ProjectSection />
-            <footer>
-                <Footer />
-            </footer>
-        </div>
-    )
+function Projects() {
+  return (
+    <>
+      <Navigation />
+      <main>
+        <ProjectSection />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  );
 }
 
-export default Projects
+export default Projects;

@@ -81,23 +81,7 @@
 }
 
 .group__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-1);
-  margin: var(--sp-3) 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.group__tags li {
-  padding: 0.3125rem 0.625rem;
-  color: var(--moss);
-  background-color: var(--sage-wash);
-  border: 1px solid var(--rule);
-  border-radius: var(--r-control);
-  font-size: var(--label);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  margin-top: var(--sp-3);
 }
 
 .group__action {

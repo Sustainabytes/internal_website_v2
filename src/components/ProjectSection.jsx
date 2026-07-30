@@ -39,7 +39,19 @@ function ProjectSection() {
                 {project.workstreams.map((stream) => (
                   <div key={stream.name} className="workstream">
                     <dt>{stream.name}</dt>
-                    <dd>{stream.summary}</dd>
+                    <dd>
+                      <p>{stream.summary}</p>
+                      {stream.skills?.length > 0 && (
+                        <ul
+                          className="tags workstream__skills"
+                          aria-label={`Skills used on ${stream.name}`}
+                        >
+                          {stream.skills.map((skill) => (
+                            <li key={skill}>{skill}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </dd>
                   </div>
                 ))}
               </dl>

@@ -1,3 +1,4 @@
+import { upcomingEvents, pastEvents } from "../data/events.js";
 import "./EduSection.css";
 
 /* A real sequence — these are the two aims, in order — so the numerals carry
@@ -15,7 +16,41 @@ const aims = [
   },
 ];
 
-const events = [];
+function PastEvent({ event }) {
+  return (
+    <article className="past">
+      <div className="past__record">
+        <span className="past__date mono">{event.date}</span>
+        <h3 className="past__title">{event.title}</h3>
+        {event.coHost && (
+          <p className="past__cohost mono">Co-hosted with {event.coHost}</p>
+        )}
+        <p className="past__summary measure">{event.summary}</p>
+
+        <dl className="panel">
+          {event.panel.map((group) => (
+            <div key={group.role} className="panel__group">
+              <dt className="eyebrow">{group.role}</dt>
+              <dd>{group.people.join(", ")}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <figure className="past__figure specimen">
+        {event.photo ? (
+          <div className="specimen__mount">
+            <img src={event.photo} alt={event.photoAlt} />
+          </div>
+        ) : (
+          /* Space reserved for a photo. Set `photo` in src/data/events.js to
+             swap this out. */
+          <div className="past__plate" aria-hidden="true" />
+        )}
+      </figure>
+    </article>
+  );
+}
 
 function EduSection() {
   return (
@@ -37,13 +72,13 @@ function EduSection() {
 
       <section className="aims">
         <div className="shell">
-          <span className="eyebrow">Our aims</span>
+          <h2 className="eyebrow">Our aims</h2>
           <ol className="aims__list">
             {aims.map((aim) => (
               <li key={aim.numeral} className="aim">
                 <span className="aim__numeral mono">{aim.numeral}</span>
                 <div className="aim__text">
-                  <h2 className="aim__title">{aim.title}</h2>
+                  <h3 className="aim__title">{aim.title}</h3>
                   <p className="aim__body measure">{aim.body}</p>
                 </div>
               </li>
@@ -54,16 +89,16 @@ function EduSection() {
 
       <section className="events">
         <div className="shell">
-          <span className="eyebrow eyebrow--rule">Upcoming events</span>
+          <h2 className="eyebrow eyebrow--rule">Upcoming events</h2>
 
-          {events.length > 0 ? (
+          {upcomingEvents.length > 0 ? (
             <ul className="events__list">
-              {events.map((event) => (
+              {upcomingEvents.map((event) => (
                 <li key={event.title} className="event">
                   <span className="event__date mono">{event.date}</span>
                   <div>
                     <h3 className="event__title">{event.title}</h3>
-                    <p className="event__desc measure">{event.description}</p>
+                    <p className="event__desc measure">{event.summary}</p>
                   </div>
                 </li>
               ))}
@@ -89,6 +124,19 @@ function EduSection() {
           )}
         </div>
       </section>
+
+      {pastEvents.length > 0 && (
+        <section className="pastEvents">
+          <div className="shell">
+            <h2 className="eyebrow eyebrow--rule">Past events</h2>
+            <div className="pastEvents__list">
+              {pastEvents.map((event) => (
+                <PastEvent key={event.id} event={event} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

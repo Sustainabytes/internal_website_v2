@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Github } from "lucide-react";
 import BrandMark from "../assets/SUSB_Logo.svg";
+import { org } from "../data/org.js";
 import "./Footer.css";
 
 const socials = [
@@ -63,8 +64,8 @@ function Footer() {
         </div>
 
         <div className="foot__legal mono">
-          <p>&copy; 2026 Cornell Sustainabytes</p>
-          <p>A Registered Student Organization of Cornell University</p>
+          <p>&copy; 2026 {org.name}</p>
+          <p>A Registered Student Organization of {org.university}</p>
           <a
             href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment"
             target="_blank"

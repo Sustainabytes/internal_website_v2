@@ -46,8 +46,14 @@
   letter-spacing: 0.14em;
 }
 
+/* An h3 for correct outline nesting, so it needs the display face restated. */
 .aim__title {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  font-weight: 400;
   font-size: var(--display-s);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
 .aim__body {
@@ -110,10 +116,140 @@
   margin-top: var(--sp-3);
 }
 
+/* --- Past events --------------------------------------------------------- */
+
+.pastEvents {
+  padding-bottom: var(--section-y);
+}
+
+.pastEvents__list {
+  margin-top: var(--sp-3);
+}
+
+.past {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--sp-3) clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: var(--sp-4);
+}
+
+.past + .past {
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--rule);
+}
+
+.past__record {
+  grid-row: 1;
+  grid-column: 1 / span 6;
+}
+
+.past__figure {
+  grid-row: 1;
+  grid-column: 8 / span 5;
+  margin: 0;
+}
+
+.past__date {
+  display: block;
+  color: var(--moss);
+  font-size: var(--label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.past__title {
+  margin-top: var(--sp-1);
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  font-weight: 400;
+  font-size: var(--display-s);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.past__cohost {
+  margin-top: var(--sp-1);
+  color: var(--ink-soft);
+  font-size: var(--label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.past__summary {
+  margin-top: var(--sp-2);
+  color: var(--ink-soft);
+}
+
+.past__figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Reserved space until a photo is added. */
+.past__plate {
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--sage);
+  border-radius: calc(var(--r-card) - 4px);
+  background-color: var(--sage-wash);
+}
+
+/* --- Speaker panel ------------------------------------------------------- */
+
+.panel {
+  margin: var(--sp-3) 0 0;
+}
+
+.panel__group {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--sp-2);
+  padding-block: var(--sp-1);
+}
+
+.panel__group + .panel__group {
+  border-top: 1px solid var(--rule);
+}
+
+.panel__group dt {
+  padding-top: 0.3rem;
+}
+
+.panel__group dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .past__record,
+  .past__figure {
+    grid-column: 1 / -1;
+  }
+
+  .past__record {
+    grid-row: 1;
+  }
+
+  .past__figure {
+    grid-row: 2;
+  }
+}
+
 @media (max-width: 640px) {
   .aim,
   .event {
     grid-template-columns: 2rem 1fr;
+  }
+
+  .panel__group {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .panel__group dt {
+    padding-top: 0;
   }
 
   .event {

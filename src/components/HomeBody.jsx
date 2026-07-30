@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import EcoFest from "../assets/ecofest.jpg";
 import TechnicalTeams from "../assets/TechnicalTeams.png";
+import { org } from "../data/org.js";
 import "./HomeBody.css";
 
 const groups = [
@@ -36,7 +37,7 @@ function HomeBody() {
         <div className="shell vision__inner">
           <span className="eyebrow vision__eyebrow">Our vision</span>
           <h2 className="vision__statement">
-            Cornell&rsquo;s first Computational Sustainability Club, driving
+            The {org.name} &mdash; the first of its kind on campus, driving
             meaningful change through events, hands-on projects, and advocacy.
           </h2>
         </div>
@@ -51,11 +52,9 @@ function HomeBody() {
                 <h2 className="group__title">{group.title}</h2>
                 <p className="group__desc">{group.description}</p>
 
-                <ul className="group__tags">
+                <ul className="tags group__tags">
                   {group.tags.map((tag) => (
-                    <li key={tag} className="mono">
-                      {tag}
-                    </li>
+                    <li key={tag}>{tag}</li>
                   ))}
                 </ul>
 

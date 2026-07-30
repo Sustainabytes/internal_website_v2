@@ -19,10 +19,12 @@ export const projects = [
       {
         name: "Impact Tracker",
         summary: "Helping customers visualize their environmental footprint.",
+        skills: ["Figma"],
       },
       {
         name: "Product Color Wheel",
         summary: "Revamping customer satisfaction behind-the-scenes.",
+        skills: ["React", "JavaScript"],
       },
     ],
   },
@@ -35,6 +37,7 @@ export const projects = [
       {
         name: "RubiScan",
         summary: "Making plant protein research accessible to all.",
+        skills: ["React", "JavaScript"],
       },
     ],
   },

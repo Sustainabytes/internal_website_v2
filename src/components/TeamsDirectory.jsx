@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Mail, Globe, Linkedin, Check, ArrowRight } from "lucide-react";
+import { Mail, Globe, Linkedin, ArrowRight } from "lucide-react";
 import CarlaPhoto from "../assets/carla-gomes.jpg";
 import FillerHeadshot from "../assets/fillerHeadshot.png";
 import { teams, advisor, memberCount } from "../data/teams.js";
@@ -10,20 +9,10 @@ const headcountOf = (team) => team.members.filter((m) => !m.isOpening).length;
 const plural = (n) => `${n} ${n === 1 ? "member" : "members"}`;
 
 function MemberCard({ member, index }) {
-  const [copied, setCopied] = useState(false);
-  const { name, role, email, linkedIn, portfolio, photo, isOpening } = member;
+  const { name, role, email, linkedIn, portfolio, photo, isOpening, description } =
+    member;
 
-  const isEmail = Boolean(email) && email.includes("@");
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1600);
-    } catch {
-      /* Clipboard unavailable — the address stays visible either way. */
-    }
-  };
+  const hasEmail = Boolean(email) && email.includes("@");
 
   return (
     <li className={`member specimen ${isOpening ? "member--open" : ""}`}>
@@ -39,16 +28,12 @@ function MemberCard({ member, index }) {
         <span className="eyebrow member__role">{role}</span>
         <h3 className="member__name">{name}</h3>
 
-        {isEmail ? (
+        {hasEmail ? (
           <div className="member__contact">
-            <button type="button" className="member__email" onClick={handleCopy}>
-              {copied ? (
-                <Check size={14} strokeWidth={2} aria-hidden="true" />
-              ) : (
-                <Mail size={14} strokeWidth={1.5} aria-hidden="true" />
-              )}
-              <span>{copied ? "Copied" : email}</span>
-            </button>
+            <a href={`mailto:${email}`} className="member__email" aria-label={`Email ${name}`}>
+              <Mail size={14} strokeWidth={1.5} aria-hidden="true" />
+              <span>{email}</span>
+            </a>
 
             <span className="member__links">
               {linkedIn && (
@@ -74,7 +59,10 @@ function MemberCard({ member, index }) {
             </span>
           </div>
         ) : (
-          <p className="member__contact member__contact--plain mono">{email}</p>
+          <div className="member__contact member__contact--plain">
+            <p className="mono">{email}</p>
+            {description && <p className="member__description">{description}</p>}
+          </div>
         )}
       </div>
     </li>
@@ -149,7 +137,7 @@ function TeamsDirectory() {
           </span>
           <h1 className="teamsPage__title">Our team</h1>
           <p className="teamsPage__intro measure">
-            Sustainabytes runs as five working groups. Each one owns a piece of the
+            Sustainabytes runs as four working groups. Each one owns a piece of the
             club&rsquo;s work, from data analysis to the events that bring the
             community together.
           </p>

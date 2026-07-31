@@ -64,6 +64,10 @@
   font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
   font-size: clamp(1.25rem, 2vw, 1.625rem);
   letter-spacing: -0.01em;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .index__count {
@@ -71,6 +75,7 @@
   font-size: var(--label);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  justify-self: end;
 }
 
 .index__arrow {
@@ -300,6 +305,28 @@
     grid-column: 1 / -1;
   }
 
+
+/* Reduce crowding of index rows on narrow viewports */
+@media (max-width: 560px) {
+  .index__row {
+    padding: clamp(1rem, 3vw, 1.25rem) 0;
+    /* Give the name more room by fixing a small width for the count column */
+    grid-template-columns: 1fr 3.25rem 1.5rem;
+    min-height: 5.5rem;
+  }
+
+  .index__name {
+    font-size: 1rem;
+    line-height: 1.05;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .index__count {
+    margin-left: 0.5rem;
+  }
+}
   .advisor__figure {
     grid-row: 1;
     max-width: 260px;

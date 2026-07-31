@@ -5,9 +5,6 @@ import FillerHeadshot from "../assets/fillerHeadshot.png";
 import { teams, advisor, memberCount } from "../data/teams.js";
 import "./TeamsDirectory.css";
 
-/* Roman numerals label the teams as a catalogued set, not a ranking. */
-const NUMERALS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
-
 const headcountOf = (team) => team.members.filter((m) => !m.isOpening).length;
 
 const plural = (n) => `${n} ${n === 1 ? "member" : "members"}`;
@@ -97,14 +94,13 @@ function TeamIndex() {
         <span className="eyebrow">Working groups</span>
 
         <ul className="index__list">
-          {teams.map((team, i) => (
+          {teams.map((team) => (
             <li key={team.id}>
               <button
                 type="button"
                 className="index__row"
                 onClick={() => jumpTo(team.id)}
               >
-                <span className="index__numeral mono">{NUMERALS[i]}</span>
                 <span className="index__name">{team.name}</span>
                 <span className="index__count mono">
                   {plural(headcountOf(team))}
@@ -124,12 +120,11 @@ function TeamIndex() {
   );
 }
 
-function TeamRoster({ team, numeral }) {
+function TeamRoster({ team }) {
   return (
     <section id={team.id} className="team">
       <div className="shell">
         <header className="team__header">
-          <span className="eyebrow">Team {numeral}</span>
           <h2 className="team__name">{team.name}</h2>
           <span className="team__count mono">{plural(headcountOf(team))}</span>
         </header>
@@ -182,8 +177,8 @@ function TeamsDirectory() {
       </section>
 
       <div className="teamsPage__roster">
-        {teams.map((team, index) => (
-          <TeamRoster key={team.id} team={team} numeral={NUMERALS[index]} />
+        {teams.map((team) => (
+          <TeamRoster key={team.id} team={team} />
         ))}
       </div>
     </div>

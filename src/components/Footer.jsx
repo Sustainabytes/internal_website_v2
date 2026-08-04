@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Github } from "lucide-react";
-import BrandMark from "../assets/SUSB_Logo.svg";
+import BrandMark from "../assets/SUSB_NewLogo.png";
 import { org } from "../data/org.js";
 import "./Footer.css";
 

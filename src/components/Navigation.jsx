@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import BrandMark from "../assets/SUSB_Logo.svg";
+import BrandMark from "../assets/SUSB_NewLogo.png";
 import "./Navigation.css";
 
 const APPLY_URL = "https://forms.gle/Xz8tnGbQK4EKTQrQ8";

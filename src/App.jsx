@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import Teams from "./pages/Teams.jsx";
 import Projects from "./pages/Projects.jsx";
 import Education from "./pages/Education.jsx";
+import Apply from "./pages/Apply.jsx";
 import Error from "./pages/Error";
 import { useEffect} from "react";
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/team" element={<Teams />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/education" element={<Education />} />
+          <Route path="/apply" element={<Apply />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </HashRouter>

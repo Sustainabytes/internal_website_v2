@@ -4,13 +4,12 @@ import { Menu, X } from "lucide-react";
 import BrandMark from "../assets/SUSB_NewLogo.png";
 import "./Navigation.css";
 
-const APPLY_URL = "https://forms.gle/Xz8tnGbQK4EKTQrQ8";
-
 function Navigation() {
   const links = [
     { name: "Teams", path: "/team" },
     { name: "Projects", path: "/projects" },
     { name: "Education", path: "/education" },
+    { name: "Apply", path: "/apply" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -45,15 +44,6 @@ function Navigation() {
             ))}
           </ul>
 
-          <a
-            href={APPLY_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn--solid nav__apply"
-            onClick={closeMenu}
-          >
-            Apply to join
-          </a>
         </div>
       </div>
     </nav>

@@ -4,8 +4,6 @@ import { memberCount, teamCount, advisor } from "../data/teams.js";
 import { projectCount } from "../data/projects.js";
 import "./Heroesection.css";
 
-const APPLY_URL = "https://forms.gle/Xz8tnGbQK4EKTQrQ8";
-
 function Herosection() {
   return (
     <section className="hero">
@@ -27,14 +25,9 @@ function Herosection() {
           </p>
 
           <div className="hero__actions">
-            <a
-              href={APPLY_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn--solid"
-            >
-              Apply to join
-            </a>
+            <Link to="/apply" className="btn btn--solid">
+              Apply
+            </Link>
             <Link to="/projects" className="btn btn--text">
               See our work
             </Link>

@@ -5,7 +5,8 @@ import { memberCount, teamCount } from "../data/teams.js";
 import { projectCount } from "../data/projects.js";
 import "./Apply.css";
 
-const APPLICATION_URL = "#";
+const APPLICATION_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScJiRIM9V9epovbBy5iHKrUqD2ZhxW0IOKqHQMfZ8wXpzX30w/closedform";
 
 const benefits = [
   {

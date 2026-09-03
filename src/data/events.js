@@ -8,6 +8,8 @@
  * EduSection.jsx that listed it while it was still upcoming (commit 3aaaa9d).
  */
 
+import careerNightPhoto from "../assets/events/career-night.webp";
+
 export const upcomingEvents = [];
 
 export const pastEvents = [
@@ -18,8 +20,9 @@ export const pastEvents = [
     coHost: "Environmental Collaborative @ Cornell",
     summary:
       "An evening panel on building a career at the intersection of computation and sustainability, with alumni, faculty, and graduate researchers taking questions from students.",
-    photo: null,
-    photoAlt: "",
+    photo: careerNightPhoto,
+    photoAlt:
+      "Students and panelists at the Computational Sustainability Career Night.",
     panel: [
       { role: "Alumni", people: ["Brian Warshay", "Phillip Lanza"] },
       { role: "Faculty", people: ["Andrew Bell", "David Shmoys"] },

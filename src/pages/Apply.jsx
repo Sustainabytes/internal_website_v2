@@ -61,7 +61,7 @@ function Apply() {
                   className="btn btn--solid"
                   onClick={handleApplicationClick}
                 >
-                  <em>Applications open soon</em>
+                  <em>Applications Open Now!</em>
                   <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
                 </a>
               </div>
